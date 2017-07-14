@@ -1,0 +1,91 @@
+html,body {
+  user-select: none;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  line-height: 1.6;
+  background-color: #f5f5f9;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-family: Arial,'微软雅黑',Helvetica Neue,Helvetica,sans-serif;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  font-family: Arial,'微软雅黑',Helvetica Neue,Helvetica,sans-serif;
+}
+
+/*
+hkb_alignment_center  垂直居中 水平两端对齐
+
+hkb_alignment_top  垂直顶部 水平两端对齐
+
+jhkb_alignment_bottom 垂直底部 水平两端对齐
+
+hkb_alignment_left 垂直顶部 水平左对齐
+
+hkb_alignment_right 垂直顶部 水平右对齐
+
+hkb_alignment_middle 垂直居中 水平左对齐
+
+hkb_center_center 垂直居中 水平居中
+
+*/
+.hkb_alignment_center,.hkb_alignment_top,.hkb_alignment_bottom,.hkb_alignment_left,.hkb_alignment_middle,.hkb_center_center,.hkb_alignment_right{/*盒子声明*/
+  display: flex;
+}
+
+.hkb_alignment_center,.hkb_alignment_top,.hkb_alignment_bottom{/*水平两端对齐*/
+  justify-content: space-between;
+}
+
+.hkb_alignment_left,.hkb_alignment_middle{ /*水平左对齐*/
+  justify-content: flex-start;
+}
+
+.hkb_center_center{/*水平居中*/
+  justify-content: center;
+}
+.hkb_alignment_right{/*水平右对齐*/
+  justify-content: flex-end;
+}
+
+.hkb_alignment_center,.hkb_alignment_middle,.hkb_center_center,.hkb_alignment_right{  /*垂直居中*/
+  align-items: center;
+}
+
+.hkb_alignment_top,.hkb_alignment_left{ /*垂直顶部*/
+  align-items: flex-start;
+}
+
+.hkb_alignment_bottom{ /*垂直底部*/
+  align-items: flex-end;
+}
+.hkb_alignment_right{
+  justify-content: flex-end;
+}
+
+.hkb_shadow{/*每个模块的阴影*/
+  box-shadow: 0 2px 3px #E9E9E9; ;
+}
+
