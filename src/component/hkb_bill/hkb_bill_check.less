@@ -1,0 +1,119 @@
+.hkb_bill_check {
+  width: 100%;
+  height: 100%;
+  background: white;
+  box-shadow: 0 2px 3px #E9E9E9;
+
+  .bill_check_all {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+
+
+
+    .bill_check {
+      width: 62%;
+      display: flex;
+      justify-content: flex-start;
+
+
+      .bill_images {
+        padding-right: 10px;
+        width: 22px;
+        height: 22px;
+        img {
+            padding-top: 5px;
+            width: 100%;
+
+        }
+      }
+
+      .bill_check_text{
+        width: calc(~'100% - 22px');
+        font-size: 100%;
+
+
+        .bill_text{
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          line-height: 18px;
+          min-height: 30px;
+
+        }
+
+        .bill_time{
+          color: #ababab;
+
+        }
+      }
+    }
+
+    .bill_money{
+      width: 42%;
+      font-size: 100%;
+      text-align: right;
+
+
+     .check_cost{
+       line-height: 30px;
+       overflow: hidden;
+     }
+
+      .check_balance{
+
+        color: #ababab;
+
+
+
+      }
+    } }
+  hr{
+
+    transform: scaleY(0.8);
+    width: 100%;
+    height: 1px;
+    border: none;
+    border-top: 1px solid #e5e5e5;
+
+  }
+
+  .check_cost_red{
+     line-height: 30px;
+    overflow: hidden;
+    color: #ff4646;
+  }
+
+  }
+.bill_check_none{
+  padding: 10px 0;
+  text-align: center;
+  color: #ababab;
+  span{
+    display: inline-block;
+    position: relative;
+    &:before,&:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 100px;
+      height: 1px;
+      border-bottom: 1px solid #ababab;
+      transform-origin: 0 0;
+      transform: scaleY(.6);
+    }
+    &:after{
+      right: 110%;
+    }
+    &:before{
+      left: 110%;
+    }
+  }
+
+
+  }
+

@@ -1,0 +1,96 @@
+.hkb_cards_holder {
+  position: relative;
+  margin: 15px;
+  background: url('../images/card_bg.png'), -webkit-linear-gradient(right, #8abc23, #9ac53b, #acd163, #c4dc81);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  border-radius: 10px;
+  color: #fff;
+  overflow: hidden;
+  .card_content {
+    padding: 15px 5px 10px 10px;
+    .content_left {
+      width: calc(~'100% - 60px');
+      .business_pic {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 5px;
+        img {
+          width: 100%;
+        }
+
+      }
+      .content_right{
+        width: calc(~'100% - 65px');
+        p:first-child {
+          font-size: 16px;
+          min-height: 40px;
+          font-weight: bold;
+          line-height: 20px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+        }
+
+        span {
+          font-size: 16px;
+        }
+      }
+
+
+    }
+
+    .recharge {
+      position: relative;
+      width: 60px;
+      font-size: 12px;
+      p {
+        text-align: center;
+        img {
+          width: 37px;
+          height: 37px;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: -2px;
+        right: 0;
+        border-left: 1px dashed #fff;
+        width: 1px;
+        height: 100%;
+        opacity: .6;
+      }
+    }
+    &:active{
+      opacity: .8;
+    }
+  }
+
+  .card_border {
+    background: url("../images/card_border2.png");
+    height: 33px;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    color: #ababab;
+    padding: 0 15px;
+    div{
+      line-height: 35px;
+      img{
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+      }
+    }
+    &:active{
+      opacity: .9;
+    }
+  }
+  & a{
+    color: #fff;
+  }
+}

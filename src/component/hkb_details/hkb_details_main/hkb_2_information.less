@@ -1,0 +1,56 @@
+.hkb_information{
+  background: #fff;
+  padding: 10px 15px;
+  .name{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .star {
+    height: 15px;
+/*    margin: 2px 0;*/
+    span {
+      display: inline-block;
+      width: 15px;
+      height: 25px;
+    }
+    .star_on {
+      background: url("../images/nearby_starOn.png") no-repeat;
+      background-size: 100%;
+    }
+    .star_half {
+      background: url("../images/nearby_starHalf.png") no-repeat;
+      background-size: 100%;
+    }
+    .star_off {
+      background: url("../images/nearby_starOff.png") no-repeat;
+      background-size: 100%;
+    }
+  }
+  .star~div{
+    color: #ababab;
+    span{
+      font-size: 14px;
+    }
+    .sort{
+      position: relative;
+      margin-right: 10px;
+      color: #8a8a8a;
+      font-size: 14px;
+      &:after {
+        content: '| ';
+        position: absolute;
+        top: -25%;
+        right: -12%;
+        color: #ababab;
+        transform: scaleX(.6);
+      }
+    }
+  }
+
+}
