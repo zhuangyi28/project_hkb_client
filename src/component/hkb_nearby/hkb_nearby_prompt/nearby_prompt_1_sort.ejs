@@ -1,0 +1,27 @@
+<div class="hkb_drop_down">
+    <div class="sort_list">
+        <div class="sort_choose">全部</div>
+        <div>美食</div>
+        <div>休闲娱乐</div>
+        <div>生活服务</div>
+        <div>运输票务</div>
+        <div>电影票</div>
+        <div>旅游</div>
+        <div>酒店</div>
+        <div>购物</div>
+        <div>虚拟</div>
+        <div>网店传媒</div>
+    </div>
+    <div class="drop_down_bg"></div>
+</div>
+<script>
+
+   document.getElementsByClassName('sort_list')[0].addEventListener('click',function (e) {
+
+       clickTab('sort_choose')
+
+       dropListRemove();//点击分类收起弹框
+
+   },false);
+
+</script>

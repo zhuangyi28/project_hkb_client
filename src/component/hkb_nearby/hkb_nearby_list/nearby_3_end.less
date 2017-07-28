@@ -1,0 +1,27 @@
+.nearby_end{
+
+  padding: 10px 0;
+  text-align: center;
+  color: #ababab;
+  span{
+    display: inline-block;
+    position: relative;
+    &:before,&:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 1px;
+      border-bottom: 1px solid #ababab;
+      transform-origin: 0 0;
+      transform: scaleY(.6);
+    }
+    &:after{
+      right: 110%;
+    }
+    &:before{
+      left: 110%;
+    }
+  }
+
+}
