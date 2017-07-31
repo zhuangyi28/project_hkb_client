@@ -1,0 +1,29 @@
+#pay_way{
+  .pop_main{
+    padding: 0 15px;
+    div{
+      position: relative;
+      padding: 20px 0;
+      img{
+        width: 26px;
+        height: 24px;
+        vertical-align: middle;
+        padding-right: 10px;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        height: 1px;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        border-top: 1px solid #ddd;
+
+        transform-origin: 0 0;
+
+        transform: scaleY(.6);
+      }
+    }
+  }
+}
