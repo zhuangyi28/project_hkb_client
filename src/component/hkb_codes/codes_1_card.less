@@ -1,7 +1,5 @@
-.hkb_codes_background {
 
-  width: 100%;
-  height: 100%;
+.hkb_codes_background {
   margin: 0 auto;
   text-align: center;
   margin-top: 80px;
@@ -23,23 +21,31 @@
 
         color: #4189e7;
         font-size: 16px;
-        letter-spacing: 2px;
         padding-top: 10px;
 
       }
 
-      .codes_card {
-
+      #QR_code {
         position: relative;
-        padding-top: 8px;
-
+        width: 220px;
+        height: 220px;
+        margin: 30px calc(~'(100% - 220px)/2');
         img {
-
-          position: relative;
-          width: 70%;
-
+          width: 100%;
+          height: 100%;
         }
-
+      }
+      .logo_QR{
+        position: absolute;
+        top: calc(~'(100% - 80px)/2');
+        left: calc(~'(100% - 70px)/2');
+        width: 70px;
+        height: 70px;
+        background: #fff;
+        img{
+          width: 100%;
+          height: 100%;
+        }
       }
 
       .codes_line {
@@ -56,9 +62,8 @@
       -webkit-justify-content: space-between;
 
       .codes_circle_left {
-
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
         background: #9ac53b;
         border-radius: 50%;
         margin: -80px 0 0 10px;
@@ -67,8 +72,8 @@
 
       .codes_circle_right {
 
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
         background: #9ac53b;
         border-radius: 50%;
         margin: -80px 10px 0 0;
@@ -110,3 +115,12 @@
   }
 }
 
+.hkb_codes_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: -webkit-linear-gradient(bottom, #8abc23, #9ac53b, #acd163, #c4dc81);
+  z-index: 1;
+}

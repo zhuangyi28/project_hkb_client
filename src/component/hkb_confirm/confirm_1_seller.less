@@ -5,72 +5,84 @@
   border-radius: 5px;
   box-shadow: 0 2px 3px #E9E9E9;
 
-
   .hkb_confirm {
-    width: 100%;
-    height: 100%;
+    position: relative;
     display: flex;
-    padding-top: -10px;
-
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
     .confirm_seller {
-
-      padding: 20px 15px;
-
+      margin-right: 10px;
       img {
-        width: 80px;
-
+        width: 50px;
+        height: 50px;
       }
     }
     .confirm_text {
-
-      letter-spacing: .5px;
-      font-size: 18px;
-      padding: 40px 0;
-
+      width: calc(~'100% - 60px');
+      margin-top: 5px;
+      font-size: 16px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
     }
-  }
-  hr {
-    margin-top: -20px;
-    transform: scaleY(0.8);
-    width: 100%;
-    height: 1px;
-    border: none;
-    border-top: 1px solid #e5e5e5;
+    &:after {
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      height: 1px;
+      bottom: 0;
+      width: 92%;
+      left: 15px;
+      border-top: 1px solid #ddd;
+      transform-origin: 0 0;
+      transform: scaleY(0.6);
+    }
   }
 
   .hkb_confirm_money {
-    padding: 10px 0 0 15px;
-    letter-spacing: 1px;
-
-    .confirm_money {
-
-      .confirm_money_title {
-
-        color: #8a8a8a;
-        font-size: 14px;
-
-      }
-
-      .confirm_money_text {
-
-        padding: 5px 0 0 35%;
-        font-size: 30px;
-        color: #ff4646;
-        padding-bottom: 5px;
-
-
-      }
-
+    padding: 5px 15px;
+    .confirm_money_title {
+      color: #8a8a8a;
+      font-size: 14px;
     }
-    hr {
-      transform: scaleY(0.8);
-      width: 100%;
-      height: 1px;
-      border: none;
-      border-top: 1px solid #e5e5e5;
-      margin-top: 15px;
-
+    .confirm_money_text {
+      font-size: 30px;
+      font-weight: bold;
+      color: #ff4646;
+      text-align: center;
     }
   }
 
+  .hkb_imf {
+    position: relative;
+    padding: 10px 15px;
+    p {
+    color: #8a8a8a;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+    .hkb_alignment_center{
+      div:first-child{
+        width: 250px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      height: 1px;
+      top: 0;
+      width: 92%;
+      left: 15px;
+      border-top: 1px solid #ddd;
+      transform-origin: 0 0;
+      transform: scaleY(0.6);
+    }
+  }
 }

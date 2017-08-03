@@ -30,32 +30,39 @@ function hkbDropDown() {
 
 function dropListShow() {//弹框出现
 
-    /*document.getElementsByClassName('hkb_drop_down')[0].style.display = 'block';*/
+    //document.getElementsByClassName('hkb_drop_down')[0].style.display = 'block';
 
-    if(document.getElementsByClassName('hkb_drop_down')[0].className.indexOf('show_list') == -1){
+    setTimeout(function () {
 
-        //如果页面上没有show_list 则添加
-        document.getElementsByClassName('hkb_drop_down')[0].className += ' show_list';
+        if(document.getElementsByClassName('hkb_drop_down')[0].className.indexOf('show_list') == -1){
 
-    }
+            //如果页面上没有show_list 则添加
+            document.getElementsByClassName('hkb_drop_down')[0].className += ' show_list';
+
+        }
+    },1);
+
+
     document.getElementsByClassName('drop_down_bg')[0].addEventListener('touchmove',windowBanEvent.Canceling);//给阴影绑定禁止事件
 
 }
 
 function dropListRemove() { //弹框关闭
 
-   /* document.getElementsByClassName('hkb_drop_down')[0].style.display = 'none';*/
-
-
+  // document.getElementsByClassName('hkb_drop_down')[0].style.display = 'none';
 
     //如果页面上有show_list,清楚页面上的class
-    if(document.getElementsByClassName('hkb_drop_down')[0].className=='hkb_drop_down show_list'){
 
-        document.getElementsByClassName('hkb_drop_down')[0].className = 'hkb_drop_down';
+    setTimeout(function () {
+        if(document.getElementsByClassName('hkb_drop_down')[0].className=='hkb_drop_down show_list'){
 
-    }
+            document.getElementsByClassName('hkb_drop_down')[0].className = 'hkb_drop_down';
 
-    document.getElementById('allTab').className = '';
+        }
+
+        document.getElementById('allTab').className = '';
+
+    },1);
 
     windowBanEvent.unbundling();//解绑页面禁止事件
 

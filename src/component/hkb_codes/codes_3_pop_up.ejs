@@ -12,15 +12,31 @@
 
         </div>
 
-        <div class="pop_main">
+        <div class="pop_main" id="container_pay">
 
-            <div class="hkb">
-                <img src="../../images/hkb_card.png">会员卡支付
+            <!-- 会员卡-->
+            <div class="pay_contain selected">
+                <div class="hkb">
+                    <img src="../../images/hkb_card.png">会员卡支付
+                </div>
+                <div class="hkb_radio"></div>
             </div>
 
-            <div class="wechat"><img src="../../images/wechat.png">微信支付</div>
+            <!--微信-->
+            <div class="pay_contain">
+                <div class="wechat">
+                    <img src="../../images/wechat.png">微信支付
+                </div>
+                <div class="hkb_radio"></div>
+            </div>
 
-            <div></div>
+            <!--微信-->
+            <div class="pay_contain">
+                <div class="wechat">
+                    <img src="../../images/wechat.png">微信支付
+                </div>
+                <div class="hkb_radio"></div>
+            </div>
 
         </div>
 
@@ -34,7 +50,12 @@
 
 <script>
 
-    payShow=new hkbShowPop({'ele':'pay_way'})
+    payShow=new hkbShowPop({'ele':'pay_way'});
+
+
+
+    //选择支付方式
+    paymentMethod();
 
 
 </script>

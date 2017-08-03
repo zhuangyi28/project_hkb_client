@@ -1,127 +1,106 @@
 .hkb_register_inputlist {
-
-  padding: 0 16px 0 16px;
-  margin-top: 25px;
-
+  padding: 0 20px;
+  margin-top: 30px;
   .register_phone {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+    label{
+      display: inline-block;
+      width: calc(~'100% - 92px');
     }
     img {
-      width: 15px;
+      width: 14px;
+      height: 22px;
       vertical-align: middle;
-      padding-right: 20px;
-
+      padding-right: 10px;
     }
     input.input_phone_icon {
-
+      width: calc(~'100% - 30px');
       color: #4a4a4a;
-      font-size: 14px;
-      letter-spacing: 1px;
+      font-size: 16px;
       border: 0;
       outline: 0;
       -webkit-tap-highlight-color: transparent;
       -webkit-appearance: none;
       background-color: transparent;
-
-
+      &::-webkit-input-placeholder { /* WebKit browsers */
+        font-size:14px;
       }
+      }
+    .input_phone_active{
 
-    .input_phone_active {
-
-      font-size: 14px;
-      border-radius: 5px;
-      width: 26%;
-      border: 1px solid #f39700;
-
-      .phone_active_text {
+      input.phone_active_text{
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #f39700;
+        outline: 0;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-appearance: none;
+        background-color: transparent;
         color: #f39700;
         text-align: center;
-        padding-top: 1px;
-        font-size: 14px;
-
+        padding: 5px 10px;
       }
     }
+  }
 
   hr {
     margin-top: 5px;
-    transform: scaleY(0.8);
+    transform-origin: 0 0;
+    transform: scaleY(0.6);
     width: 100%;
     height: 1px;
     border: none;
     border-top: 1px solid #e5e5e5;
-
   }
 
-  .register_pen {
+  .register {
     padding-top: 10px;
-
     label {
       display: block;
-      height: 30px;
+      height: 40px;
 
       img {
-        width: 15px;
+        width: 16px;
+        height: 22px;
         vertical-align: middle;
-        padding-right: 20px;
+        padding-right: 10px;
 
       }
-      input.input_pen_icon {
+      input.input_icon {
         padding: 10px 0 10px 0;
         color: #4a4a4a;
+        font-size: 16px;
+        border: 0;
+        outline: 0;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-appearance: none;
+        background-color: transparent;
+        &::-webkit-input-placeholder { /* WebKit browsers */
+          font-size:14px;
+        }
+      }
+      input.input_key_again{
+        width: 80%;
+        margin-left: 30px;
+        padding-top: 10px;
+        color: #4a4a4a;
         font-size: 14px;
-        letter-spacing: 1px;
         border: 0;
         outline: 0;
         -webkit-tap-highlight-color: transparent;
         -webkit-appearance: none;
         background-color: transparent;
 
-
       }
     }
-
-
-
   }
-  .register_key{
-    padding-top: 10px;
-
-    label{
-      display: block;
-      height: 30px;
-
-
-    img{
-
-      width: 15px;
-      vertical-align: middle;
-      padding-right: 20px;
-
-    }
-    input.input_key_icon{
-
-      padding: 10px 0 10px 0;
-      color: #4a4a4a;
-      font-size: 14px;
-      letter-spacing: 1px;
-      border: 0;
-      outline: 0;
-      -webkit-tap-highlight-color: transparent;
-      -webkit-appearance: none;
-      background-color: transparent;
-
-    }
-  }
-  }
-
-
-
   .register_input_repeat {
-    padding-top: 10px;
-    padding-left: 38px;
+    padding-top: 5px;
+    padding-left: 35px;
     color: #f39700;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

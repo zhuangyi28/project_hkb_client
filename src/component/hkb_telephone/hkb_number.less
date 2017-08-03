@@ -1,82 +1,18 @@
-/*.number{
- !* width: 100%;
-  height: 100%;*!
-
-
-
-
-  .number_text{
-    background: white;
-    box-shadow: 0 2px 3px #E9E9E9;
-    font-size: 20px;
-    margin: 30px auto;
-
-
-
-
-
-
-    .number_text1{
-      margin: 0 15px;
-
-
-    }
-
-
-    .number-text2{
-
-      margin: 0 15px;
-
-
-
-
-    }
-  }
-}*/
-
-
-
-
 .hkb_number{
   width: 100%;
-  height: 100px;
   background: white;
   box-shadow: 0 2px 3px #E9E9E9;
   margin-top: 20px;
   position: relative;
   color: #4a4a4a;
-  display: block;
-
-
-  &:after{
-    content: " ";
-    border-bottom: 1px solid #E9E9E9;
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 48%;
-  }
-
   .number_section{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
+    padding: 15px;
     vertical-align: middle;
-
-
-
-
-    &:last-child{
-     /* padding-top: 10px;*/
-      content: " ";
-      border-bottom: none;
-
-
-    }
+    position: relative;
    .number_section_icon{
-     padding: 0 15px 10px 0;
      img{
        width: 25px;
+       height: 25px;
      }
 
    }
@@ -85,9 +21,27 @@
      padding: 0 0 0 15px;
 
    }
-
+    &:last-child:after{
+      /* padding-top: 10px;*/
+      content: " ";
+      border-bottom: none;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      height: 1px;
+      bottom: 0;
+      width: 92%;
+      left: 15px;
+      border-top: 1px solid #ddd;
+      transform-origin: 0 0;
+      transform: scaleY(0.6);
+    }
+    &:active{
+      background: #f1f1f1;
+    }
 
   }
-
 }
 
