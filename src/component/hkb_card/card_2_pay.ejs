@@ -1,55 +1,51 @@
 <!--支付方式-->
-
-
-<div class="hkb_pay">
-    <div class="hkb_pay_icon">
-
-        <img src="../../images/xin.png"/>
-        <span>支付方式</span>
-
-    </div>
-
-    <div class="pay_mode">
-
-         <div class="pay_wechat">
-
-             <div class="pay_seller">
-
-             <img src="../../images/wechat.png">
-             <div class="pay_text">微信支付</div>
-
-             </div>
-
-             <div class="pay_choose"><img src="../../images/choose.png"/> </div>
-
-
-         </div>
-
-        <hr/>
-
-    <div class="pay_choose_bank">
-        <img src="../../images/bank.png"/>
-        <div class="bank_text">中国农业  储蓄卡（0805）</div>
-
-    </div>
-
-
-        <hr/>
-
-    <div class="pay_membership">
-        <img src="../../images/hkb.png"/>
-        <div class="membership_text">会员卡支付</div>
-
-    </div>
-    </div>
-
+<div class="hkb_pay_icon">
+    <img src="../../images/xin.png"/>
+    <span>支付方式</span>
 </div>
 
 
-<div class="card_next" >
+<div class="confirm_bill">
 
-    <a class= href="#"><span>确认支付</span>
+    <div class="pay_box">
+        <!-- 微信支付-->
+        <label class="pay_mode hkb_alignment_center">
+            <div class="confirm_mode_seller ">
+                <img src="../../images/wechat.png">
+                <span class="confirm_text">微信支付</span>
+            </div>
+            <input type="checkbox" class="confirm_choose" checked>
+        </label>
 
-    </a>
+        <!-- 银行卡-->
+        <label class="pay_mode hkb_alignment_center">
+            <div class="confirm_mode_seller ">
+                <img src="../../images/bank.png">
+                <span class="confirm_text">中国农业 储蓄卡(0805)</span>
+            </div>
+            <input type="checkbox" class="confirm_choose">
+        </label>
+
+        <!-- 会员卡 -->
+        <label class="pay_mode hkb_alignment_center">
+            <div class="confirm_mode_seller ">
+                <img src="../../images/hkb_card.png">
+                <span class="confirm_text">会员卡支付</span>
+            </div>
+            <input type="checkbox" class="confirm_choose">
+        </label>
+    </div>
+</div>
+
+
+
+<!-- 下一步-->
+<div class="confirm_next" >
+
+    <a class= href=" href="../hkb_success/hkb_success.html"><span>确认支付</span></a>
 
 </div>
+<script>
+    //复选框单选
+    inputChoose();
+</script>

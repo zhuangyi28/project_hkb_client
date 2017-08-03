@@ -1,22 +1,64 @@
+<div class="confirm_bill">
 
+    <!-- 会员卡支付 -->
+    <div class="confirm_card_pay">
 
+        <label class="pay_mode hkb_alignment_center">
+            <div class="hkb_alignment_middle">
+                <div class="confirm_card_seller">
+                    <img src="../../images/seller.png"/>
+                </div>
+                <div class="confirm_card_text">会员卡支付-合村日本料理</div>
+            </div>
+            <input type="checkbox" class="confirm_choose" checked>
 
-<div class="confirm_card_pay">
+        </label>
 
-
-    <div class="card_seller">
-        <div class="confirm_card_seller">
-            <img src="../../images/seller.png"/>
-        </div>
-
-        <div class="confirm_card_text">会员卡支付-合村日本料理</div>
-
+        <a class="card_contain">
+            <div class="card_confirm_text">会员卡支付余额仅剩100.00元，买卡立享优惠</div>
+            <img src="../../images/nearby_arrow.png">
+        </a>
     </div>
-    <hr/>
 
-    <div class="card_confirm_text">会员卡支付余额仅剩100.00元，买卡立享优惠</div>
+    <div class="pay_box">
+        <!-- 微信支付-->
+        <label class="pay_mode hkb_alignment_center">
+            <div class="confirm_mode_seller ">
+                <img src="../../images/wechat.png">
+                <span class="confirm_text">微信支付</span>
+            </div>
+            <input type="checkbox" class="confirm_choose">
+        </label>
+
+        <!-- 银行卡-->
+        <label class="pay_mode hkb_alignment_center">
+            <div class="confirm_mode_seller ">
+                <img src="../../images/bank.png">
+                <span class="confirm_text">中国农业 储蓄卡(0805)</span>
+            </div>
+            <input type="checkbox" class="confirm_choose">
+        </label>
+
+        <!-- 会员卡 -->
+<!--        <label class="pay_mode hkb_alignment_center" for='hkbCard'>
+            <div class="confirm_mode_seller ">
+                <img src="../../images/hkb_card.png">
+                <span class="confirm_text">会员卡支付</span>
+            </div>
+            <input type="checkbox" class="confirm_choose" id="hkbCard">
+        </label>-->
+    </div>
+</div>
 
 
 
+<!-- 下一步-->
+<div class="confirm_next" >
+
+    <a class= href=" href="../hkb_success/hkb_success.html"><span>下一步</span></a>
 
 </div>
+
+<script>
+    inputChoose();
+</script>

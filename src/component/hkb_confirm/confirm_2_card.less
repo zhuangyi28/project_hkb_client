@@ -1,54 +1,170 @@
-
+.confirm_bill{
+  input.confirm_choose{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+    cursor: default;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-transition: background-color ease 0.1s;
+    transition: background-color ease 0.1s;
+    &:checked{
+      background-color: #f39700;
+      border: 1px solid #f39700;
+      text-align: center;
+      background-clip: padding-box;
+    }
+    &:before{
+      content: '';
+      width: .5rem;
+      height: .3rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -0.25rem;
+      margin-top: -0.25rem;
+      background: 0 0;
+      border: 1px solid #fff;
+      border-top: 0;
+      border-right: 0;
+      z-index: 2;
+      border-radius: 0;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+}
 .confirm_card_pay{
+  display: block;
   background: white;
   margin: 15px 15px 0 15px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 3px #E9E9E9;
-
-
-
-  .card_seller{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding-top: -10px;
-
-
+  .pay_mode{
+    position: relative;
+    padding: 10px 15px 0 15px;
+    &:after{
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      height: 1px;
+      bottom: 0;
+      width: 92%;
+      left: 15px;
+      border-top: 1px solid #ddd;
+      transform-origin: 0 0;
+      transform: scaleY(0.6);
+    }
+    &:active{
+      background: #f1f1f1;
+    }
+  }
     .confirm_card_seller {
-
-      padding: 20px 15px;
-
+      margin-right: 10px;
       img {
-        width: 40px;
-
+        width: 30px;
+        height: 30px;
       }
     }
+
     .confirm_card_text {
-
-      letter-spacing: .5px;
       font-size: 14px;
-      padding: 30px 0;
       color: #8a8a8a;
-
 
     }
   }
-  hr {
-    margin-top: -20px;
-    transform: scaleY(0.8);
-    width: 100%;
-    height: 1px;
-    border: none;
-    border-top: 1px solid #e5e5e5;
-  }
 
+.card_contain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
   .card_confirm_text{
     color: #f39700;
-    padding: 10px 0 20px 70px;
     font-size: 12px;
-letter-spacing: .5px;
+  }
+  img{
+    display: block;
+    width: 18px;
+    height: 10px;
+    transform: rotate(-90deg);
+
+  }
+  &:active{
+    background: #f1f1f1;
+  }
+
+}
+
+.pay_box{
+  margin: 15px;
+  background: #fff;
+  border-radius: 10px;
+  .pay_mode{
+    position: relative;
+    padding: 15px;
+    .confirm_mode_seller{
+      width: calc(~'100% - 30px');
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      img{
+        width: 26px;
+        height: 24px;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+    }
+
+    .confirm_text{
+      color: #4a4a4a;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      height: 1px;
+      bottom: 0;
+      width: 92%;
+      left: 15px;
+      border-top: 1px solid #ddd;
+      transform-origin: 0 0;
+      transform: scaleY(0.6);
+    }
+    &:last-child:before{
+      content: '';
+      border: none;
+    }
+    &:active{
+      background: #f1f1f1;
+    }
+  }
+}
 
 
+.confirm_next{
 
+  margin-top: 30px;
+  a {
+    display: block;
+    margin: 0 auto;
+    width: 92%;
+    top: 65%;
+    border-radius: 5px;
+    background: linear-gradient(left, #8abc23, #9ac53b, #acd163, #c4dc81);
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: white;
+    &:active{
+      opacity: .6;
+    }
   }
 }

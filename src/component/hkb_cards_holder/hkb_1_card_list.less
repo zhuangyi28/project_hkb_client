@@ -1,18 +1,20 @@
 .hkb_cards_holder {
   position: relative;
   margin: 15px;
-  background: url('../images/card_bg.png'), -webkit-linear-gradient(right, #8abc23, #9ac53b, #acd163, #c4dc81);
-  background-size: 100%;
+  //background: -webkit-linear-gradient(right, #8abc23, #9ac53b, #acd163, #c4dc81);
+  background: #fff;
+/*  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center bottom;*/
   border-radius: 10px;
-  color: #fff;
+  color: #4a4a4a;
   overflow: hidden;
   .card_content {
     padding: 15px 5px 10px 10px;
     .content_left {
       width: calc(~'100% - 60px');
       .business_pic {
+        border: 1px solid #ddd;
         width: 55px;
         height: 55px;
         border-radius: 50%;
@@ -26,16 +28,17 @@
       .content_right{
         width: calc(~'100% - 65px');
         p:first-child {
-          font-size: 16px;
-          min-height: 40px;
-          font-weight: bold;
-          line-height: 20px;
+          font-size: 14px;
+          min-height: 32px;
+          line-height: 16px;
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
           overflow: hidden;
         }
-
+        p+p{
+          margin-top: 5px;
+        }
         span {
           font-size: 16px;
         }
@@ -48,6 +51,7 @@
       position: relative;
       width: 60px;
       font-size: 12px;
+      color: #82bc3f;
       p {
         text-align: center;
         img {
@@ -60,7 +64,7 @@
         position: absolute;
         left: -2px;
         right: 0;
-        border-left: 1px dashed #fff;
+        border-left: 1px dashed #c6e19a;
         width: 1px;
         height: 100%;
         opacity: .6;
@@ -76,7 +80,7 @@
     height: 33px;
     background-size: 100%;
     background-repeat: repeat-x;
-    color: #ababab;
+    color: #fff;
     padding: 0 15px;
     div{
       line-height: 35px;
@@ -91,6 +95,6 @@
     }
   }
   & a{
-    color: #fff;
+    color: #4a4a4a;
   }
 }

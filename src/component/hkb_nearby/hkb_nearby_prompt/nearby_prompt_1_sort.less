@@ -1,5 +1,6 @@
 .hkb_drop_down{
   .sort_list{
+    display: none;
     position: fixed;
     left: 0;
     width: 100%;
@@ -31,6 +32,7 @@
     }
   }
   .drop_down_bg{
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -44,9 +46,11 @@
   }
   &.show_list{
     .sort_list{
+      display: block;
       transform: translate3d(0,42px, 0);
     }
     .drop_down_bg{
+      display: block;
       opacity: .3;
     }
   }
