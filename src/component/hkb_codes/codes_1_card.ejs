@@ -15,6 +15,15 @@
             <!-- 中间图片-->
             <div class="logo_QR"><img src="../../images/code.png"></div>
 
+            <!-- 二维码未出现时动画-->
+            <div class="hkb_QR_loading">
+                <div class="k-spinner">
+                    <div class="k-bubble-1"></div>
+                    <div class="k-bubble-2"></div>
+                </div>
+
+            </div>
+
             <!-- 分割线-->
             <div class="codes_line"> </div>
 
@@ -54,12 +63,18 @@
 
 <script>
 
+    //二维码
 var qrcode = new QRCode('QR_code',{
 
     text:'http://www.baidu.com',             //输入二维码解析网址
     correctLevel : QRCode.CorrectLevel.H     //容错率30%
 
 })
+//注意
+
+    //使用API
+    //qrcode.clear()                    //二维码清除方法
+    //qrcode.makeCode('new_content')    //添加新的解析地址
 
 
 </script>
