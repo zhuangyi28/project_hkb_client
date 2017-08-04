@@ -16,11 +16,13 @@
 </div>
 <script>
 
+    //下拉分类页选择
+
    document.getElementsByClassName('sort_list')[0].addEventListener('click',function (e) {
 
-       clickTab('sort_choose',this)
+       nearBy.clickTab('sort_choose',this)
 
-       dropListRemove();//点击分类收起弹框
+       dropDownList.dropListRemove();//点击分类收起弹框
 
    },false);
 
