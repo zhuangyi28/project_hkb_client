@@ -2,10 +2,10 @@
 /*打叉*/
 
 .hkb_fail_animation{
-  margin-top: 30%;
+  margin-top: 15%;
 
 .fail_animation_wrong {
-  padding: 15px 0 10px 0;
+  padding-top: 15px;
 
   .swal2-icon {
     padding: 0;
@@ -104,6 +104,7 @@
     top: 95%;
     font-size: 22px;
     text-align: center;
+    margin-bottom: 15px;
   }
 
   .hkb_button_fail:active{
@@ -111,11 +112,50 @@
 
   }
 
+/*消费账单*/
+
+  .hkb_fail_text_bill{
+    position: relative;
+    margin: 0 15px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+
+    .hkb_fail_bill{
+
+      background: #fff;
+      padding: 5px 15px;
+      font-size: 16px;
+      text-align: center;
+
+      span.fail_bill_text1{
+
+        color: #ff4646;
+        padding-left: 5px;
+        margin-bottom: 10px;
+
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: calc(~'(100% - 34px) / 2');
+      width: 0;
+      height: 0;
+      border-width: 17px;
+      border-style: solid;
+      border-color: transparent;
+      margin-bottom: -5px;
+      border-bottom-color: currentColor;
+      color: #fff;
+    }
+  }
 
   /*关闭*/
 
   .hkb_button_fail{
-    margin-top: 60px;
+    margin-top: 40px;
     a {
 
       display: block;
