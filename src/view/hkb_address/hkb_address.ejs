@@ -8,52 +8,5 @@
 
 <%-include('../../component/hkb_address/hkb_address.ejs')%>
 
-<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=84ce5f49d95f193533514224c3ecef17"></script>
-<script type="text/javascript">
-    var map = new AMap.Map('container_map',{
-        resizeEnable: true,
-        zoom: 10,
-        center: [116.480983, 40.0958]
-    });
- /*   function init(){
-        var map = new AMap.Map('container_map', {
-            resizeEnable: true,
-            center: [117.000923, 36.675807],
-            zoom: 15
-        });
-        map.plugin(["AMap.ToolBar"], function() {
-            map.addControl(new AMap.ToolBar());
-        });
-
-        AMap.plugin('AMap.Geocoder',function() {
-            var geocoder = new AMap.Geocoder({
-                city: "021"//城市，默认：“全国”
-            });
-            var marker = new AMap.Marker({
-                map: map,
-                bubble: true
-            });
-
-            var dress='上海市虹桥路808号';//调取商铺详细地址
-
-            function getPositionMap(e){
-
-                geocoder.getLocation(dress,function(status,result){
-                    if(status=='complete'&&result.geocodes.length){
-                        marker.setPosition(result.geocodes[0].location);
-                        map.setCenter(marker.getPosition());
-                        //document.getElementById('message').innerHTML = ''
-                    }else{
-                        //document.getElementById('message').innerHTML = '获取位置失败'
-                    }
-                })
-            }
-
-            getPositionMap();
-
-        });
-
-    }*/
-</script>
 </body>
 </html>
