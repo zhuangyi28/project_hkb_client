@@ -1,0 +1,97 @@
+.hkb_membership_card {
+  width: 100%;
+  .hkb_membership_banner1 {
+
+    width: 90%;
+    display: block;
+    background: white;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 2px 3px #E9E9E9;
+    position: relative;
+    z-index: 1;
+
+    .hkb_banner1_images {
+      height: 110px;
+
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 15px;
+      }
+    }
+
+    .seller_logo_1 {
+      position: absolute;
+      /*  margin: -112px 0 0 15px;*/
+      width: 65px;
+      height: 65px;
+      top: 15px;
+      left: 15px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .hkb_banner1_background {
+      position: relative;
+      padding: 6px 0;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 3px #E9E9E9;
+      .hkb_banner1_text {
+        color: #4a4a4a;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 800;
+
+        img {
+          width: 20px;
+          height: 18px;
+          vertical-align: sub;
+        }
+      }
+
+      .banner1_next {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+
+        img {
+          width:18px;
+          height:18px;
+
+        }
+      }
+    }
+  }
+
+  /*GO图标*/
+
+  .banner1_go {
+
+    z-index: 6;
+    position: absolute;
+    top: -18px;
+    right: -15px;
+    width: 80px;
+    height: 80px;
+    background: url("../images/hkb_background_go.png");
+    background-size: 100%;
+
+    .banner1_go_text {
+      font-size: 30px;
+      color: #ffffff;
+      text-shadow: 0 2px 3px #5b7e15;
+      font-weight: 600;
+      line-height: 80px;
+      text-align: center;
+      &:active{
+        text-shadow: none;
+      }
+    }
+  }
+
+}
