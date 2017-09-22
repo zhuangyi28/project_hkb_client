@@ -1,114 +1,153 @@
-.hkb_bill_check {
-  background: white;
-  box-shadow: 0 2px 3px #E9E9E9;
-  .bill_check_all {
-    position: relative;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    vertical-align: middle;
-
-    .bill_check {
-      width: 62%;
+.hkb_bill_content{
+  width: 100%;
+  height: calc(100vh);
+  overflow: auto;
+  .hkb_bill_check {
+    background: white;
+    box-shadow: 0 2px 3px #E9E9E9;
+    .bill_check_all {
+      position: relative;
+      padding: 15px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
+      vertical-align: middle;
 
-      .bill_images {
-        padding-right: 10px;
-        width: 22px;
-        height: 22px;
-        img {
-          padding-top: 5px;
-          width: 100%;
+      .bill_check {
+        width: 62%;
+        display: flex;
+        justify-content: flex-start;
 
+        .bill_images {
+          padding-right: 10px;
+          width: 22px;
+          height: 22px;
+          img {
+            padding-top: 5px;
+            width: 100%;
+
+          }
+        }
+
+        .bill_check_text {
+          width: calc(~'100% - 22px');
+          font-size: 100%;
+          .bill_text {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            line-height: 18px;
+            min-height: 30px;
+
+          }
+
+          .bill_time {
+            color: #ababab;
+
+          }
         }
       }
 
-      .bill_check_text {
-        width: calc(~'100% - 22px');
+      .bill_money {
+        width: 42%;
         font-size: 100%;
-        .bill_text {
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
-          overflow: hidden;
-          line-height: 18px;
-          min-height: 30px;
+        text-align: right;
 
+        .check_cost {
+          line-height: 30px;
+          overflow: hidden;
         }
 
-        .bill_time {
+        .check_balance {
           color: #ababab;
 
         }
       }
-    }
-
-    .bill_money {
-      width: 42%;
-      font-size: 100%;
-      text-align: right;
-
-      .check_cost {
-        line-height: 30px;
-        overflow: hidden;
+      &:after {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        height: 1px;
+        bottom: 0;
+        width: 92%;
+        left: 15px;
+        border-top: 1px solid #ddd;
+        transform-origin: 0 0;
+        transform: scaleY(0.6);
       }
-
-      .check_balance {
-        color: #ababab;
-
+      &:last-child:after {
+        content: '';
+        border: none;
       }
     }
-    &:after {
-      content: '';
-      position: absolute;
-      box-sizing: border-box;
-      height: 1px;
-      bottom: 0;
-      width: 92%;
-      left: 15px;
-      border-top: 1px solid #ddd;
-      transform-origin: 0 0;
-      transform: scaleY(0.6);
+
+    .check_cost_red {
+      line-height: 30px;
+      overflow: hidden;
+      color: #ff4646;
     }
-    &:last-child:after {
-      content: '';
-      border: none;
-    }
+
   }
 
-  .check_cost_red {
-    line-height: 30px;
-    overflow: hidden;
-    color: #ff4646;
+  .bill_check_none {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    color: #ababab;
+    span {
+      display: inline-block;
+      position: relative;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 100px;
+        height: 1px;
+        border-bottom: 1px solid #ababab;
+        transform-origin: 0 0;
+        transform: scaleY(.6);
+      }
+      &:after {
+        right: 110%;
+      }
+      &:before {
+        left: 110%;
+      }
+    }
+
   }
+
 
 }
 
-.bill_check_none {
-  padding: 10px 0;
-  text-align: center;
-  color: #ababab;
-  span {
-    display: inline-block;
-    position: relative;
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 100px;
-      height: 1px;
-      border-bottom: 1px solid #ababab;
-      transform-origin: 0 0;
-      transform: scaleY(.6);
-    }
-    &:after {
-      right: 110%;
-    }
-    &:before {
-      left: 110%;
-    }
-  }
 
+.hkb_refresh{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  //display: none;
+  transform: translate3d(0,-100%,0);
+  font-size: 16px;
+
+  .icon{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 2px;
+    border: solid 1px #4a4a4a;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s linear;
+  }
+}
+
+.hkb_refresh_move{
+  transition: all 0.3s linear;
 }
 
