@@ -100,11 +100,6 @@ var moveRefresh={
                 if(thisShowFn){
                     thisShowFn();
                 }
-                else
-                {
-                    window.location.reload(true);          //如果没有值，页面刷新
-
-                }
             }
             refreshText.className=""+showEleClass+" hkb_refresh_move";
 
