@@ -348,15 +348,25 @@
 
             jfLazyLoading.ajaxContentInit({//触发的脚本(动态添加元素)
 
-                listdata:
-                {
-                    "src": "../../images/recharge.png",//充值消费图标
-                    "billtext": '合村日本料理 快捷消费',//消费文案
-                    "time":'17-05-23 18:00',//消费时间
-                    'pay':true,//判断属于充值或者消费。false为充值，true为消费
-                    "money": "-15",//消费金额或者充值金额
-                    "banlace": "10000"//余额
-                }
+                listdata:[
+                    {
+                        "src": "../../images/recharge.png",//充值消费图标
+                        "billtext": '合村日本料理 快捷消费',//消费文案
+                        "time":'17-05-23 18:00',//消费时间
+                        'pay':true,//判断属于充值或者消费。false为充值，true为消费
+                        "money": "-15",//消费金额或者充值金额
+                        "banlace": "10000"//余额
+                    },
+
+                    {
+                        "src": "../../images/consumption.png",//充值消费图标
+                        "billtext": '合村日本料理 快捷消费',//消费文案
+                        "time":'17-05-23 18:00',//消费时间
+                        'pay':false,//判断属于充值或者消费。false为充值，true为消费
+                        "money": "+15",//消费金额或者充值金额
+                        "banlace": "10000"//余额
+                    },
+                ]
 
             })
 
