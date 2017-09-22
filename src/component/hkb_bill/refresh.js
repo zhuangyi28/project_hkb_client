@@ -198,7 +198,7 @@ var jfLazyLoading = {
         }
 
 
-        _this.listdata = details.listdata ||
+        _this.listdata = details.listdata ||[
 
                 {
                     "src": "../../images/recharge.png",
@@ -209,23 +209,28 @@ var jfLazyLoading = {
                     "banlace": "10000"
 
 
-                };
+                }];
 
         var thishtml='';
 
-         thishtml='<div class="bill_check"><div class="bill_images"><img src='+ _this.listdata.src+'></div><div class="bill_check_text"><div class="bill_text">'+_this.listdata.billtext+'</div><div class="bill_time">'+_this.listdata.time+'</div></div></div><div class="bill_money">';
+        for(var i = 0; i < _this.listdata.length; i++){
 
-                if(_this.listdata.pay){
+            thishtml='<div class="bill_check"><div class="bill_images"><img src='+ _this.listdata[i].src+'></div><div class="bill_check_text"><div class="bill_text">'+_this.listdata[i].billtext+'</div><div class="bill_time">'+_this.listdata[i].time+'</div></div></div><div class="bill_money">';
 
-                    thishtml+='<div class="check_cost">'+_this.listdata.money+'</div>'
-                }else{
-                    thishtml+='<div class="check_cost_red">'+_this.listdata.money+'</div>'
-                }
+            if(_this.listdata[i].pay){
 
-        thishtml+='<div class="check_balance">余额:'+_this.listdata.banlace+'</div></div>';
+                thishtml+='<div class="check_cost">'+_this.listdata[i].money+'</div>'
+            }else{
+                thishtml+='<div class="check_cost_red">'+_this.listdata[i].money+'</div>'
+            }
+
+            thishtml+='<div class="check_balance">余额:'+_this.listdata[i].banlace+'</div></div>';
 
 
-        _this.ajaxAddnode('div', thishtml, 'bill_check_all');//增加a标签
+            _this.ajaxAddnode('div', thishtml, 'bill_check_all');//增加a标签
+
+        }
+
 
 
     },
