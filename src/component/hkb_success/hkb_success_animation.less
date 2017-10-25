@@ -2,7 +2,7 @@
 
 
 .hkb_success_animation{
-  margin-top: 8%;
+  margin-top: 2%;
 
 
   .success_animation_right{
@@ -391,12 +391,6 @@
   }
 
 
-
-
-
-
-
-
   /*操作成功*/
 
   .hkb_text_success{
@@ -409,11 +403,6 @@
     margin-bottom: 18px;
   }
 
-  .hkb_button_success:active{
-    opacity: 0.8;
-
-  }
-
   /*消费账单*/
 
   .hkb_fail_text_bill{
@@ -422,6 +411,9 @@
     padding: 10px;
     background: #fff;
     border-radius: 5px;
+    .font_org{
+      color: #f0942d;
+    }
 
     .hkb_fail_bill{
 
@@ -459,18 +451,27 @@
   .hkb_button_success{
     margin-top: 60px;
     a {
-
       display: block;
       margin: 0 auto;
       width: 92%;
       top: 65%;
       border-radius: 5px;
-      background: linear-gradient(left, #8abc23, #9ac53b, #acd163, #c4dc81);
       text-align: center;
       line-height: 40px;
       font-size: 20px;
-      color: white;
       letter-spacing: 1px;
+      &:active{
+        opacity: .8;
+      }
+    }
+    .main_btn{
+      background: linear-gradient(left, #8abc23, #9ac53b, #acd163, #c4dc81);
+      color: white;
+    }
+    .secondary_btn{
+      margin-top: 10px;
+      border: 1px solid #8abc23;
+      color: #8abc23;
     }
   }
 }
