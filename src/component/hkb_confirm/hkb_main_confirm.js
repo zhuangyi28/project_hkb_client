@@ -13,6 +13,8 @@ var confirmChoose = {
 
             var inputBox = document.getElementsByClassName('confirm_choose');
 
+            //遍历所有的input
+
             for (var j = 0;j<inputBox.length;j++){
 
                 inputBox[j].checked = false;

@@ -12,7 +12,7 @@ var moveRefresh={
 
         if(!details){
             details={}
-        };
+        }
 
         var moveEleClass=details.moveEleClass||'hkb_bill_content';
 
@@ -85,8 +85,11 @@ var moveRefresh={
 
 
                 if(getDis>moveDis){
+
                     refreshText.getElementsByClassName('icon')[0].style.transform="rotate(180deg)";
+
                 }else {
+
                     refreshText.getElementsByClassName('icon')[0].style.transform="rotate(0)";
                 }
             }
@@ -98,7 +101,9 @@ var moveRefresh={
             if(getDis>moveDis&&moveEle.scrollTop<10){
 
                 if(thisShowFn){
+
                     thisShowFn();
+
                 }
             }
             refreshText.className=""+showEleClass+" hkb_refresh_move";
@@ -110,12 +115,17 @@ var moveRefresh={
             refreshText.style.webkitTransform="translate3d(0,-100%,0)";
 
             setTimeout(function(){
+
                 refreshText.getElementsByClassName('icon')[0].style.transform="rotate(0)";
+
             },300);
 
             this.style.transform="translate3d(0,0,0)";
 
             this.style.webkitTransform="translate3d(0,0,0)";
+
+            //初始化为0
+            getDis = 0;
 
 
 

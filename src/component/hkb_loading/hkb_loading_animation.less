@@ -1,0 +1,450 @@
+#tip_loading {
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  width: calc(38vw);
+  height: calc(38vw);
+  position: fixed;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10px;
+  animation: showLoading 30s both;
+  opacity: 1;
+  z-index: 1002;
+  overflow: hidden;
+}
+
+.loading_box{
+  text-align: center;
+  font-size: 10px;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 10px;
+
+  /*--操作成功--*/
+  .success_animation_right{
+    width: 100%;
+    .swal2-icon {
+      padding: 0;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border: 4px solid grey;
+      border-radius: 50%;
+      margin: auto;
+      box-sizing: content-box;
+      cursor: default;
+      user-select: none;
+      z-index: -1;
+      .tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        transform: rotate(45deg)
+      }
+      .line {
+        height: 5px;
+        background-color: #8abc23;
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 2
+      }
+      .animate-success-tip{
+        animation: animate-success-tip .75s;
+        @keyframes animate-success-tip {
+          0%, 54% {
+            width: 0;
+            left: 1px;
+            top: 19px
+          }
+
+          70% {
+            width: 50px;
+            left: -8px;
+            top: 37px
+          }
+          84% {
+            width: 17px;
+            left: 21px;
+            top: 48px
+          }
+          100% {
+            width: 25px;
+            left: 14px;
+            top: 45px
+          }
+        }
+      }
+      .animate-success-long {
+        animation: animate-success-long .75s;
+        @keyframes animate-success-long {
+          0%, 65% {
+            width: 0;
+            right: 46px;
+            top: 54px
+          }
+
+          84% {
+            width: 55px;
+            right: 0;
+            top: 35px
+          }
+          100% {
+            width: 47px;
+            right: 8px;
+            top: 38px
+          }
+        }
+      }
+      .long {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        transform: rotate(-45deg)
+      }
+      .placeholder {
+        width: 80px;
+        height: 80px;
+        border: 4px solid rgba(165, 220, 134, .2);
+        border-radius: 50%;
+        box-sizing: content-box;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        z-index: 2
+      }
+
+      .fix {
+        width: 7px;
+        height: 90px;
+        background-color: #fff;
+        position: absolute;
+        left: 28px;
+        top: 8px;
+        z-index: 1;
+        transform: rotate(-45deg)
+      }
+      &.swal2-success {
+        border-color: #8abc23;
+        &::after, &::before {
+          content: '';
+          position: absolute;
+          width: 60px;
+          height: 120px;
+          background: #fff;
+        }
+        &::before {
+          border-radius: 120px 0 0 120px;
+          top: -7px;
+          left: -33px;
+          transform: rotate(-45deg);
+          transform-origin: 60px 60px
+        }
+        &::after {
+          border-radius: 0 120px 120px 0;
+          top: -11px;
+          left: 30px;
+
+          transform: rotate(-45deg);
+          transform-origin: 0 60px
+        }
+      }
+      &.animate::after {
+        animation: rotatePlaceholder 4.25s ease-in;
+        @keyframes rotatePlaceholder {
+
+          0%,
+          5% {
+            transform: rotate(-45deg)
+          }
+
+          100%,
+          12% {
+            transform: rotate(-405deg)
+          }
+        }
+      }
+    }
+  }
+
+  /*--操作失败--*/
+  .fail_animation_wrong{
+    width: 100%;
+    .swal2-icon {
+      padding: 0;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border: 4px solid grey;
+      border-radius: 50%;
+      margin: 20px auto 30px;
+      box-sizing: content-box;
+      cursor: default;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      .x-mark {
+        position: relative;
+        display: block
+      }
+      .animate-x-mark {
+        animation: animate-x-mark .5s;
+        @keyframes animate-x-mark {
+
+          0%,
+          50% {
+            -webkit-transform: scale(.4);
+            transform: scale(.4);
+            margin-top: 26px;
+            opacity: 0
+          }
+
+          80% {
+            -webkit-transform: scale(1 .15
+            );
+            transform: scale(1 .15
+            );
+            margin-top: -6px
+          }
+          100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            margin-top: 0;
+            opacity: 1
+          }
+        }
+      }
+      .left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 17px
+      }
+      .line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f27474;
+        display: block;
+        top: 37px;
+        border-radius: 2px
+      }
+      .right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 16px
+      }
+      &.swal2-error {
+        border-color: #f27474;
+      }
+      &.animate-error-icon {
+        animation: animate-error-icon .5s;
+        @keyframes animate-error-icon {
+
+          0% {
+            -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+            opacity: 0
+          }
+
+          100% {
+            -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+            opacity: 1
+          }
+        }
+      }
+    }
+  }
+  /*-- 操作注意--*/
+  .pay_attention{
+    width: 100%;
+
+    .swal2-icon{
+      width: 80px;
+      height: 80px;
+      border: 4px solid grey;
+      border-radius: 50%;
+      margin: 20px auto 30px;
+      box-sizing: content-box;
+      cursor: default;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .swal2-info{
+      display: block;
+      color: #f39700;
+      border-color: #f39700;
+      font-size: 60px;
+      line-height: 80px;
+      text-align: center;
+    }
+    .animate-info-icon{
+      animation: animate-info-icon 1s;
+
+      @keyframes animate-info-icon {
+
+        0% {
+          transform: rotate(360deg);
+          opacity: 0
+        }
+
+        100% {
+          transform: rotate(0);
+          opacity: 1
+        }
+      }
+    }
+
+
+  }
+
+
+
+}
+#tip_loading.small{
+  width: calc(25vw);
+  height: calc(25vw);
+  transform: scale3d(1, 1, 1);
+  animation: showSmallLoading 30s both;
+  .loading_box{
+    height: 55%;
+    padding-top: 15px;
+  }
+}
+#tip_loading.attention{
+  width: calc(60vw);
+  height: calc(45vw);
+  padding:15px;
+  .loading_box{
+    padding-top: 0;
+    height: 55%;
+  }
+
+}
+@keyframes showSmallLoading {
+  0%,99%{
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes showLoading {
+  0% {
+    transform: scale3d(0.3, 0.3, 1);
+    opacity: 0;
+  }
+  1%,99% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.jd_loading {
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  /*loading 动画*/
+  .k-ball-holder3{
+    margin-left: 30%;
+    margin-bottom: 50%;
+  }
+  .k-ball7a {
+    border:0;
+    margin:0;
+    width:16px;
+    height:16px;
+    position:absolute;
+    border-radius:50%;
+    animation:k-loadingO 2s ease infinite;
+    background:#8abc23;
+    animation-delay:-1.5s
+  }
+  .k-ball7b {
+    border:0;
+    margin:0;
+    width:16px;
+    height:16px;
+    position:absolute;
+    border-radius:50%;
+    animation:k-loadingO 2s ease infinite;
+    background:#9ac53b;
+    animation-delay:-1s
+  }
+  .k-ball7c {
+    border:0;
+    margin:0;
+    width:16px;
+    height:16px;
+    position:absolute;
+    border-radius:50%;
+    animation:k-loadingO 2s ease infinite;
+    background:#acd163;
+    animation-delay:-0.5s
+  }
+  .k-ball7d {
+    border:0;
+    margin:0;
+    width:16px;
+    height:16px;
+    position:absolute;
+    border-radius:50%;
+    animation:k-loadingO 2s ease infinite;
+    background:#c4dc81;
+  }
+  @keyframes k-loadingO {
+     0%,100% {
+       transform:translate(0)
+     }
+     25% {
+       transform:translate(160%)
+     }
+     50% {
+       transform:translate(160%,160%)
+     }
+     75% {
+       transform:translate(0,160%)
+     }
+  }
+    /*loading 动画 结束*/
+
+
+  .loading_animation_text{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+
+  }
+}
+.tip_loading_bg{
+  position: fixed;
+  left: -100%;
+  top: -100%;
+  width: 300%;
+  height: 300%;
+  background: black;
+  opacity: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+.showtext{
+  text-align: center;
+}

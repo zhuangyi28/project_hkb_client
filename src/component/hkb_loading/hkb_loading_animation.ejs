@@ -1,0 +1,42 @@
+<style>
+    button {
+
+        width: 100%;
+        height: 50px;
+        display: block;
+        margin: 10px 0;
+    }
+
+</style>
+
+
+<button onclick="jfShowTips.loadingShow({
+'text' : '加载中',
+'thisNode':loadInnerHtml.node.loading,//loading动画
+'thisClass':'small'//loading动画为'small'
+})">loading弹出框
+</button>
+<button onclick="jfShowTips.loadingShow({
+'text' : '操作成功',
+'thisNode':loadInnerHtml.node.loadingSuccess,//成功页面
+'thisClass':false//成功失败动画是为false
+})">成功弹出框
+</button>
+<button onclick="jfShowTips.loadingShow({
+'text' : '操作失败',
+'thisNode':loadInnerHtml.node.loadingFail,//失败页面
+'thisClass':false//成功失败动画是为false
+})">失败弹出框
+</button>
+<button onclick="jfShowTips.loadingShow({
+'text' : '无法获取您的位置信息，请在手机系统的[设置]>[隐私]>[定位服务]，并允许微信使用定位服务。',
+'thisNode':loadInnerHtml.node.loadingAttention,//失败页面
+'thisClass':'attention'//注意动画是为'attention'
+})">注意弹出框</button>
+
+
+
+
+
+
+

@@ -38,7 +38,7 @@
     .input_phone_active{
 
       input.phone_active_text{
-        font-size: 14px;
+        font-size: 16px;
         border-radius: 5px;
         border: 1px solid #f39700;
         outline: 0;
@@ -93,12 +93,16 @@
         margin-left: 30px;
         padding-top: 10px;
         color: #4a4a4a;
-        font-size: 14px;
+        font-size: 16px;
         border: 0;
         outline: 0;
         -webkit-tap-highlight-color: transparent;
         -webkit-appearance: none;
         background-color: transparent;
+
+        &::-webkit-input-placeholder { /* WebKit browsers */
+          font-size:14px;
+        }
 
       }
     }

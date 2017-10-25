@@ -2,97 +2,97 @@
 /*打叉*/
 
 .hkb_fail_animation{
-  margin-top: 15%;
+  margin-top: 10%;
 
 .fail_animation_wrong {
   padding-top: 15px;
 
   .swal2-icon {
-    padding: 0;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border: 4px solid grey;
-    border-radius: 50%;
-    margin: 20px auto 30px;
-    box-sizing: content-box;
-    cursor: default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    .x-mark {
+      padding: 0;
       position: relative;
-      display: block
-    }
-    .animate-x-mark {
-      animation: animate-x-mark .5s;
-      @keyframes animate-x-mark {
+      width: 80px;
+      height: 80px;
+      border: 4px solid grey;
+      border-radius: 50%;
+      margin: 20px auto 30px;
+      box-sizing: content-box;
+      cursor: default;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      .x-mark {
+        position: relative;
+        display: block
+      }
+      .animate-x-mark {
+        animation: animate-x-mark .5s;
+        @keyframes animate-x-mark {
 
-        0%,
-        50% {
-          -webkit-transform: scale(.4);
-          transform: scale(.4);
-          margin-top: 26px;
-          opacity: 0
-        }
+          0%,
+          50% {
+            -webkit-transform: scale(.4);
+            transform: scale(.4);
+            margin-top: 26px;
+            opacity: 0
+          }
 
-        80% {
-          -webkit-transform: scale(1 .15
-          );
-          transform: scale(1 .15
-          );
-          margin-top: -6px
+          80% {
+            -webkit-transform: scale(1 .15
+            );
+            transform: scale(1 .15
+            );
+            margin-top: -6px
+          }
+          100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            margin-top: 0;
+            opacity: 1
+          }
         }
-        100% {
-          -webkit-transform: scale(1);
-          transform: scale(1);
-          margin-top: 0;
-          opacity: 1
+      }
+      .left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 17px
+      }
+      .line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f27474;
+        display: block;
+        top: 37px;
+        border-radius: 2px
+      }
+      .right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 16px
+      }
+      &.swal2-error {
+        border-color: #f27474;
+      }
+      &.animate-error-icon {
+        animation: animate-error-icon .5s;
+        @keyframes animate-error-icon {
+
+          0% {
+            -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+            opacity: 0
+          }
+
+          100% {
+            -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+            opacity: 1
+          }
         }
       }
     }
-    .left {
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-      left: 17px
-    }
-    .line {
-      position: absolute;
-      height: 5px;
-      width: 47px;
-      background-color: #f27474;
-      display: block;
-      top: 37px;
-      border-radius: 2px
-    }
-    .right {
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      right: 16px
-    }
-    &.swal2-error {
-      border-color: #f27474;
-    }
-    &.animate-error-icon {
-      animation: animate-error-icon .5s;
-      @keyframes animate-error-icon {
-
-        0% {
-          -webkit-transform: rotateX(100deg);
-          transform: rotateX(100deg);
-          opacity: 0
-        }
-
-        100% {
-          -webkit-transform: rotateX(0);
-          transform: rotateX(0);
-          opacity: 1
-        }
-      }
-    }
-  }
 }
   /*操作失败*/
 
@@ -107,10 +107,6 @@
     margin-bottom: 15px;
   }
 
-  .hkb_button_fail:active{
-    opacity: 0.8;
-
-  }
 
 /*消费账单*/
 
@@ -120,6 +116,9 @@
     padding: 10px;
     background: #fff;
     border-radius: 5px;
+    .font_org{
+      color: #f0942d;
+    }
 
     .hkb_fail_bill{
 
@@ -157,18 +156,27 @@
   .hkb_button_fail{
     margin-top: 40px;
     a {
-
       display: block;
       margin: 0 auto;
       width: 92%;
       top: 65%;
       border-radius: 5px;
-      background: linear-gradient(left, #8abc23, #9ac53b, #acd163, #c4dc81);
       text-align: center;
       line-height: 40px;
       font-size: 20px;
-      color: white;
       letter-spacing: 1px;
+      &:active{
+        opacity: .8;
+      }
+    }
+    .main_btn{
+      background: linear-gradient(left, #8abc23, #9ac53b, #acd163, #c4dc81);
+      color: white;
+    }
+    .secondary_btn{
+      margin-top: 10px;
+      border: 1px solid #8abc23;
+      color: #8abc23;
     }
   }
 }
