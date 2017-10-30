@@ -43,7 +43,6 @@ var moveRefresh={
 
         moveEle.addEventListener('webkitTransitionEnd',transitionEndFn,false);
 
-
         function startFn(event){
 
             var evt=event || window.event;
@@ -131,15 +130,12 @@ var moveRefresh={
 
         }
 
-
         function transitionEndFn(){
 
             this.className=this.className.replace('hkb_refresh_move','');
 
             refreshText.className=refreshText.className.replace('hkb_refresh_move','');
         }
-
-
 
 
     }
