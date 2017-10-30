@@ -11,6 +11,8 @@ var hkbLazyLoading = {
 
         var _this = this;
 
+        var moveNum = 0;//初始值为0
+
         if (!details) {//如果details未输入，则防止报错
             details = {};
         }
@@ -21,7 +23,14 @@ var hkbLazyLoading = {
         //鼠标滚动事件
         document.getElementsByClassName('nearby_list')[0].addEventListener("scroll", function () {
 
-            _this.getAjaxLoadDistance();
+            if(moveNum==0 || moveNum==5 ){//降频
+
+                _this.getAjaxLoadDistance();
+
+                moveNum = 0
+            }
+
+            moveNum++;
 
 
         }, false)
@@ -30,6 +39,7 @@ var hkbLazyLoading = {
 
     //获取异步加载的触发距离
     getAjaxLoadDistance: function () {
+
         var _this = this;
 
         var thisScrollTop = document.getElementsByClassName('nearby_list')[0].scrollTop;//获取滚动条的距离
@@ -41,9 +51,11 @@ var hkbLazyLoading = {
 
         if (parseFloat(thisDocumentHeight) - parseFloat(thisScrollTop + thisWindowHeight) <= _this.ajaxLoadDistance) {//如果当前文档底部距离窗口底部的距离小于50，执行相应的脚本
 
+
             if (_this.fn) {
 
                 _this.fn();
+
             }
 
         }
@@ -56,9 +68,9 @@ var hkbLazyLoading = {
         var _this = this;
 
         if (!details) {//如果details未输入，则防止报错
+
             details = {};
         }
-
 
         _this.listdata = details.listdata ||[
 
@@ -70,14 +82,13 @@ var hkbLazyLoading = {
                     'times':'100',
                     'star':'<div class="star"><span class="star_off"></span><span class="star_on"></span><span class="star_on"></span><span class="star_half"></span><span class="star_off"></span></div>',
                     'distance':'19.34km',
-                    'discount':'<div class="discount"><img src="../../images/nearby_good.png">进店先购卡再消费更多优惠</div></div>'
+                    'discount':true,
+                    'discount_text':'进店先购卡再消费更多优惠'
 
 
                 }];
 
         var thishtml='';
-
-
 
         for(var i = 0; i < _this.listdata.length; i++){
 
@@ -87,7 +98,7 @@ var hkbLazyLoading = {
             //判断有无有文案
             if(_this.listdata[i].discount){
 
-                thishtml+='<div class="discount"><img src="../../images/nearby_good.png">进店先购卡再消费更多优惠</div></div>'
+                thishtml+='<div class="discount"><img src="../../images/nearby_good.png">'+_this.listdata[i].discount_text+'</div></div>'
 
             }
 
@@ -95,7 +106,6 @@ var hkbLazyLoading = {
             var thisAddEle = _this.ajaxAddnode('a', thishtml, 'hkb_business hkb_alignment_top');//增加a标签
 
             thisAddEle.setAttribute('href',_this.listdata[i].data_href);//增加链接
-
 
 
         }
@@ -123,4 +133,4 @@ var hkbLazyLoading = {
 
         return obj
     }
-}
+};
