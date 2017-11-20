@@ -3,7 +3,7 @@
     <!-- 会员卡支付 -->
     <div class="confirm_card_pay">
 
-        <label class="pay_mode hkb_alignment_center no_pay">
+        <label class="pay_mode hkb_alignment_center">
             <div class="hkb_alignment_middle">
                 <div class="confirm_card_seller">
                     <img src="../../images/seller.png"/>
@@ -11,7 +11,6 @@
                 <div class="confirm_card_text">会员卡支付-合村日本料理</div>
             </div>
             <input type="checkbox" class="confirm_choose">
-
         </label>
 
         <a class="card_contain">
@@ -27,7 +26,7 @@
                 <img src="../../images/wechat.png">
                 <span class="confirm_text">微信支付</span>
             </div>
-            <input type="checkbox" class="confirm_choose" checked>
+            <input type="checkbox" class="confirm_choose">
         </label>
 
         <!-- 银行卡-->
@@ -64,5 +63,10 @@
 
     //选择支付方式
     confirmChoose.inputChoose();
+
+
+    //点击按钮
+    document.getElementsByClassName('confirm_bill')[0].getElementsByTagName('input')[0].checked = true;
+
 
 </script>
