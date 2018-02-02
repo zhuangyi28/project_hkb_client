@@ -32,26 +32,24 @@
 
         <div class="codes_circle ">
 
-            <div class="codes_circle_left">  </div>
-
-            <div class="codes_circle_right">   </div>
+            <div class="codes_test">提示：二维码有效期为60秒</div>
 
         </div>
 
-        <div class="codes_all hkb_alignment_center" onclick="payShow.show()">
+        <!--<div class="codes_all hkb_alignment_center" onclick="payShow.show()">-->
 
-            <div class="codes_wechat"><img src="../../images/wechat.png"/><span>微信支付</span>   <!--微信支付-->
+            <!--<div class="codes_wechat"><img src="../../images/wechat.png"/><span>微信支付</span>   &lt;!&ndash;微信支付&ndash;&gt;-->
 
-            </div>
+            <!--</div>-->
 
-            <div class="codes_change">
-                <!-- 更换图标 -->
-                <div class="change_circle"><img src="../../images/circle-orange.png"/><span>更换</span>
+            <!--<div class="codes_change">-->
+                <!--&lt;!&ndash; 更换图标 &ndash;&gt;-->
+                <!--<div class="change_circle"><img src="../../images/circle-orange.png"/><span>更换</span>-->
 
-                </div>
-            </div>
+                <!--</div>-->
+            <!--</div>-->
 
-        </div>
+        <!--</div>-->
 
 
     </div>
@@ -75,6 +73,33 @@ var qrcode = new QRCode('QR_code',{
     //使用API
     //qrcode.clear()                    //二维码清除方法
     //qrcode.makeCode('new_content')    //添加新的解析地址
+
+
+
+
+
+//     var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+//
+//     window.addEventListener(evt,resize,false);
+//
+//     function resize() {
+//
+//         if(window.orientation == 0 || window.orientation == 180) {
+//
+//
+//             document.getElementsByClassName('hkb_codes_background')[0].style.marginTop = '100px'
+//         }
+//         else{
+//
+//             document.getElementsByClassName('hkb_codes_background')[0].style.marginTop = '20px'
+//         }
+//
+//
+//     }
+//    resize();
+//
+
+
 
 
 </script>

@@ -2,7 +2,7 @@
 
 
 .hkb_pay_animation{
-  margin-top: 30%;
+  margin-top: 25%;
 
 
   .pay_animation_right{
@@ -23,7 +23,7 @@
         width: 25px;
         left: 14px;
         top: 46px;
-        transform: rotate(45deg)
+        transform: rotate(45deg);
       }
       .line {
         height: 5px;
@@ -31,7 +31,7 @@
         display: block;
         border-radius: 2px;
         position: absolute;
-        z-index: 2
+        z-index: 2;
       }
       .animate-success-tip{
         animation: animate-success-tip .75s;
@@ -39,53 +39,55 @@
           0%, 54% {
             width: 0;
             left: 1px;
-            top: 19px
+            top: 19px;
           }
 
           70% {
             width: 50px;
             left: -8px;
-            top: 37px
+            top: 37px;
           }
           84% {
             width: 17px;
             left: 21px;
-            top: 48px
+            top: 48px;
           }
           100% {
             width: 25px;
             left: 14px;
-            top: 45px
+            top: 45px;
           }
         }
-      }
+      } /*success 短的*/
       .animate-success-long {
         animation: animate-success-long .75s;
         @keyframes animate-success-long {
           0%, 65% {
             width: 0;
             right: 46px;
-            top: 54px
+            top: 54px;
           }
-
           84% {
             width: 55px;
             right: 0;
-            top: 35px
+            top: 35px;
           }
           100% {
             width: 47px;
             right: 8px;
-            top: 38px
+            top: 38px;
           }
         }
-      }
+      }/*success 长的*/
+
       .long {
         width: 47px;
         right: 8px;
         top: 38px;
-        transform: rotate(-45deg)
+        transform: rotate(-45deg);
       }
+
+
       .placeholder {
         width: 80px;
         height: 80px;
@@ -95,7 +97,7 @@
         position: absolute;
         left: -4px;
         top: -4px;
-        z-index: 2
+        z-index: 2;
       }
       .fix {
         width: 7px;
@@ -105,7 +107,7 @@
         left: 28px;
         top: 8px;
         z-index: 1;
-        transform: rotate(-45deg)
+        transform: rotate(-45deg);
       }
       &.swal2-success {
         border-color: #a5dc86;
@@ -121,7 +123,7 @@
           top: -7px;
           left: -33px;
           transform: rotate(-45deg);
-          transform-origin: 60px 60px
+          transform-origin: 60px 60px;
         }
         &::after {
           border-radius: 0 120px 120px 0;
@@ -129,7 +131,7 @@
           left: 30px;
 
           transform: rotate(-45deg);
-          transform-origin: 0 60px
+          transform-origin: 0 60px;
         }
       }
       &.animate::after {
@@ -138,27 +140,86 @@
 
           0%,
           5% {
-            transform: rotate(-45deg)
+            transform: rotate(-45deg);
           }
 
           100%,
           12% {
-            transform: rotate(-405deg)
+            transform: rotate(-405deg);
           }
         }
       }
     }
 
   }
+
+  /*动画*/
+  .load-3{
+    text-align: center;
+    margin-bottom: 10px;
+    .k-line2{
+      display: inline-block;
+      height: 14px;
+      width: 14px;
+      margin-right: 5px;
+      opacity: 0;
+      border-radius: 50%;
+      transform: translateX(-300px);
+      background-color: #8abc23;
+      &.k-line12-1{
+        animation: k-loadingS 4s infinite;
+        animation-delay: .8s;
+      }
+      &.k-line12-2{
+        animation: k-loadingS 4s infinite;
+        animation-delay: .7s;
+      }
+      &.k-line12-3{
+        animation: k-loadingS 4s infinite;
+        animation-delay: .6s;
+      }
+      &.k-line12-4{
+        animation: k-loadingS 4s infinite;
+        animation-delay: .5s;
+      }
+      &.k-line12-5{
+        animation: k-loadingS 4s infinite;
+        animation-delay: .4s;
+      }
+      &.k-line12-6{
+        animation: k-loadingS 4s infinite;
+        animation-delay: .3s;
+      }
+      &.k-line12-7{
+        animation: k-loadingS 4s infinite;
+        animation-delay: .2s;
+      }
+      &.k-line12-8{
+        animation: k-loadingS 4s infinite;
+        animation-delay: .1s;
+      }
+      @keyframes k-loadingS{
+        40% {
+          transform:translateX(0);
+          opacity:.8
+        }
+        100% {
+          transform:translateX(200px);
+          opacity:0
+        }
+      }
+    }
+  }
+
   /*支付成功*/
   .hkb_pay_text{
 
     position: relative;
     height: 100%;
     width: 100%;
-    top: 95%;
     font-size: 22px;
     text-align: center;
+    padding-top: 10px;
   }
 
   .hkb_button_pay:active{
@@ -167,7 +228,7 @@
   }
   /*关闭*/
   .hkb_button_pay{
-    margin-top: 60px;
+    margin-top: 30px;
     a {
 
       display: block;
@@ -183,5 +244,60 @@
       letter-spacing: 1px;
     }
   }
+
+
+  /*扫一扫买单*/
+
+
+  .hkb_button_half{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  .hkb_button_scan{
+    margin-top: 20px;
+    width: 42%;
+
+    a {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #8abc23;
+      text-align: center;
+      line-height: 40px;
+      font-size: 18px;
+      color: #8abc23;
+      letter-spacing: 1px;
+    }
+  }
+
+    .hkb_button_scan:active{
+      opacity: 0.8;
+
+    }
+
+  /*二维码买单*/
+  .hkb_button_code{
+    margin-top: 20px;
+    width: 42%;
+
+    a {
+
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #8abc23;
+      text-align: center;
+      line-height: 40px;
+      font-size: 18px;
+      color: #8abc23;
+      letter-spacing: 1px;
+    }
+  }
+    .hkb_button_code:active{
+      opacity: 0.8;
+
+    }
+
 }
 
+}

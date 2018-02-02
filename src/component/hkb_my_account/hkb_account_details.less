@@ -1,0 +1,159 @@
+
+/*个人信息*/
+
+.hkb_account_details{
+  width:100%;
+  height: 100%;
+
+
+  .hkb_account_background{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+  .account_background_big{
+
+    img{
+      width: 100%;
+      z-index: 3;
+    }
+  }
+
+
+
+
+  .hkb_account_information{
+    position: absolute;
+    top: 7%;
+    margin: 0 auto;
+    z-index: 5;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    line-height: 28px;
+
+
+    .account_background_small{
+
+      text-align: center;
+      width:100%;
+
+
+
+
+
+      img{
+
+        width:93%;
+        border-radius: 10px;
+        box-shadow: 0 2px 3px #E9E9E9;
+
+      }
+    }
+
+
+    .account_information_mime{
+      position: absolute;
+      top: 3%;
+      width: 100%;
+      height: 80px;
+
+
+      .account_information_appear{
+        width: 100%;
+        margin: 0 auto;
+      img{
+
+        width:65px;
+      }
+    }
+
+    .account_information_name{
+
+      font-size: 24px;
+      padding-top: 5px;
+    }
+
+    .account_information_tel{
+
+
+      font-size: 20px;
+      color: #8a8a8a;
+    }
+    }
+  }
+
+
+
+}
+}
+
+
+/*余额详情*/
+
+.hkb_account_balance{
+  display: block;
+  background: white;
+  margin: 65px 15px 0 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #E9E9E9;
+
+  .hkb_available_balance{
+    position: relative;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+
+
+    &:after{
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      height: 1px;
+      bottom: 0;
+      width: 92%;
+      left: 15px;
+      border-top: 1px solid #ddd;
+      transform-origin: 0 0;
+      transform: scaleY(0.6);
+    }
+    &:last-child:after{
+      content: '';
+      border: none;
+    }
+
+
+    .balance_text{
+      display: flex;
+      justify-content: space-between;
+      color: #4a4a4a;
+
+    }
+
+    .balance_sum{
+
+     color: #ff4646;
+     font-size: 18px;
+      font-weight: bold;
+
+    }
+
+    .balance_go{
+
+padding-left: 10px;
+
+      img{
+      width: 50%;
+      }
+
+    }
+  }
+ a.button:active{
+    opacity: .6;
+
+
+  }
+
+
+}
