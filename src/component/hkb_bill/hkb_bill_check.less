@@ -11,9 +11,54 @@
       display: flex;
       justify-content: space-between;
       vertical-align: middle;
+      .bill_check{
+        display: flex;
+        justify-content:space-between;
+        align-items: flex-start;
+        .bill_images {
+          padding-right: 10px;
+          width: 22px;
+          height: 22px;
+          img {
+            padding-top: 5px;
+            width: 100%;
 
-      .bill_check {
-        width: 62%;
+          }
+        }
+        .bill_content{
+          width: calc(~'100vw - 70px');
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
+        }
+        .bill_text{
+          max-width:200px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          line-height: 18px;
+        }
+        .bill_check_text{
+          margin-bottom: 4px;
+        }
+        .check_balance{
+          color: #4a4a4a;
+          white-space: nowrap;
+        }
+        .bill_check_text,.bill_code,.bill_money{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .bill_time,.bill_code{
+          color: #ababab;
+        }
+      }
+
+/*      .bill_check {
+
         display: flex;
         justify-content: flex-start;
 
@@ -47,7 +92,6 @@
           }
         }
       }
-
       .bill_money {
         width: 42%;
         font-size: 100%;
@@ -62,7 +106,7 @@
           color: #ababab;
 
         }
-      }
+      }*/
       &:after {
         content: '';
         position: absolute;

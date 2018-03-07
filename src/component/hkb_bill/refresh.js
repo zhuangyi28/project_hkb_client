@@ -209,9 +209,10 @@ var jfLazyLoading = {
                 {
                     "src": "../../images/recharge.png",
                     "billtext": '合村日本料理 快捷消费',
-                    "time":'17-05-23 18:00',
+                    "time":'2017-05-23 18:00',
                     'pay':true,
-                    "money": "-15",
+                    "money": "-15.00",
+                    'code':'2018022709235404099522',
                     "banlace": "10000"
 
 
@@ -219,7 +220,7 @@ var jfLazyLoading = {
 
         var thishtml='';
 
-        for(var i = 0; i < _this.listdata.length; i++){
+        /*for(var i = 0; i < _this.listdata.length; i++){
 
             thishtml='<div class="bill_check"><div class="bill_images"><img src='+ _this.listdata[i].src+'></div><div class="bill_check_text"><div class="bill_text">'+_this.listdata[i].billtext+'</div><div class="bill_time">'+_this.listdata[i].time+'</div></div></div><div class="bill_money">';
 
@@ -231,6 +232,24 @@ var jfLazyLoading = {
             }
 
             thishtml+='<div class="check_balance">余额:'+_this.listdata[i].banlace+'</div></div>';
+
+
+            _this.ajaxAddnode('div', thishtml, 'bill_check_all');//增加a标签
+
+        }*/
+
+        for(var i = 0; i < _this.listdata.length; i++){
+
+            thishtml='<div class="bill_check"><div class="bill_images"><img src='+ _this.listdata[i].src+'></div><div class="bill_content"><div class="bill_check_text"><div class="bill_text">'+_this.listdata[i].billtext+'</div>';
+
+            if(_this.listdata[i].pay){
+
+                thishtml+='<div class="check_cost">'+_this.listdata[i].money+'</div></div>'
+            }else{
+                thishtml+='<div class="check_cost_red">'+_this.listdata[i].money+'</div></div>'
+            }
+
+            thishtml+='<div class="bill_code">流水号：'+_this.listdata[i].code+'</div><div class="bill_money"><div class="bill_time">'+_this.listdata[i].time+'</div><div class="check_balance">余额: '+_this.listdata[i].banlace+'</div></div></div></div>';
 
 
             _this.ajaxAddnode('div', thishtml, 'bill_check_all');//增加a标签
