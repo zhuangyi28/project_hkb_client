@@ -1,0 +1,49 @@
+<!-- 注册点击 -->
+
+<div class="hkb_register_inputlist">
+    <!-- 手机号码 -->
+<div class="register_phone">
+    <label >
+        <img src="../../images/icon1.png"/>
+        <input class="input_phone_icon" type="text" pattern="[0-9]*" placeholder="请输入手机号码" maxlength="11">
+    </label>
+        <div class="input_phone_active">
+            <input type="button" class="phone_active_text" value="获取验证码" onclick="sendCode(this)">
+       </div>
+
+</div>
+    <hr/>
+
+    <!-- 验证码 -->
+
+    <div class="register">
+        <label >
+           <img src="../../images/icon2.png"/>
+           <input class="input_icon" type="text" pattern="[0-9]*" placeholder="请输入验证码" maxlength="6">
+      </label>
+    </div>
+    <hr/>
+
+    <!-- 密码 -->
+
+    <div class="register">
+        <label>
+           <img src="../../images/icon3.png"/>
+           <input class="input_icon" type="password" pattern="[0-9]*" placeholder="请输入6位数字交易密码" maxlength="6">
+
+        </label>
+    </div>
+    <hr/>
+
+    <div class="register">
+        <label>
+
+            <input class="input_key_again" type="password" pattern="[0-9]*" placeholder="请再次输入6位数字交易密码" maxlength="6">
+
+        </label>
+    </div>
+    <hr/>
+
+<!--此处为报错文案显示处-->
+    <div class="register_input_repeat" style="display: none">*交易密码长度为6位数字</div>
+</div>

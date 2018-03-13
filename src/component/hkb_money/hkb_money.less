@@ -1,0 +1,79 @@
+.hkb_money_amount {
+  background: white;
+  padding: 8px 8px;
+  margin: 20px 15px 0 15px;
+  border-radius: 5px;
+  border: 2px solid #9ac53b;
+
+  .money_squareness {
+    font-size: 14px;
+
+  }
+
+  .value{
+       display: flex;
+       .rmb_unit{
+         font-size: 32px;
+         color: #4a4a4a;
+         height: 35px;
+         margin-top: 18px;
+         padding-right: 2px;
+       }
+       .number{
+         display: flex;
+         width: 85%;
+         .keyNumshow{
+           font-size: 50px;
+           color: #9ac53b;
+           padding-left: 2px;
+           width: 100%;
+           height: 68px;
+           span{
+             color: #4a4a4a;
+           }
+         }
+         .focusing:after{
+           content: '▏';
+           display: inline-block;
+           transform: scaleX(0.5);
+           -webkit-transform: scaleX(0.5);
+           width: 0;
+           font-size: 42px;
+           position: relative;
+           bottom: 4px;
+           color: #9ac53b;
+           animation: fadeInInputKeybroad .6s infinite;
+           -webkit-animation: fadeInInputKeybroad .6s infinite;
+           animation-direction: alternate;
+           -webkit-animation-direction: alternate;
+         }
+         input{
+           border: none;
+           outline: none;
+           display: inline;
+           -webkit-appearance: none;
+           background: transparent;
+           color: transparent;
+           position: absolute;
+           top: 10px;
+           left: 30px;
+         }
+       }
+     }
+
+  .money_line{
+    hr{
+      height: 1px;
+      background: white;
+      border: none;
+      border-top: 1px solid #bbbbbb;
+    }
+  }
+
+  .money_text{
+    color: #bbbbbb;
+    padding-top: 8px;
+
+  }
+
+}

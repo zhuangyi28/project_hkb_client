@@ -1,0 +1,97 @@
+
+<%-include('./hkb_nearby_list/nearby_1_nav.ejs')%>
+
+<div class="hkb_refresh">
+    <span class="icon">↓</span>
+    <span>下拉刷新</span>
+</div>
+
+<div class="nearby_list">
+
+    <!-- 列表 -->
+    <div class="nearby_list_content">
+
+        <%-include('./hkb_nearby_list/nearby_2_business.ejs')%>
+
+    </div>
+
+    <!-- 没有更多-->
+    <%-include('./hkb_nearby_list/nearby_3_end.ejs')%>
+
+</div>
+
+
+
+<%-include('./hkb_nearby_prompt/nearby_prompt_1_sort.ejs')%>
+
+
+<script>
+
+
+    //下拉刷新
+    moveRefresh.init({
+
+        moveEleClass:'nearby_list',//刷新的盒子
+
+        moveDis:'20',//刷新移动距离
+
+        fn:function(){
+
+            //alert('此时刷新')
+            window.location.reload(true);//刷新
+
+
+        }
+    })
+
+    //异步加载
+    hkbLazyLoading.ajaxLoadInit({
+
+        "bottomDistance":"5",//距离底部的距离，触发事件，单位省略
+
+        fn:function(){//触发的脚本
+
+                hkbLazyLoading.ajaxContentInit({//触发的脚本(动态添加元素)
+
+                    listdata:[
+                        {
+                            'data_href':'javascript:',//跳转链接
+                            'shopname':'合村日本料理(虹桥路店)文案文案文案文案文案文案文案文案文案文案文案文案',//商户名称
+                            'picture':'../../images/merchant_test1.jpg',//商户LOGO
+                            'category':'美食',//商户分类
+                            'times':'100',//商户优惠购买次数
+                            'star':'<div class="star"><span class="star_on"></span><span class="star_on"></span><span class="star_on"></span><span class="star_on"></span><span class="star_on"></span></div>',
+                            'distance':'19.34km',//商户距离
+                            'discount':true,//有文案情况下为true
+                            'discount_text':'进店先购卡再消费更多优惠'//文本内容
+                        },
+
+                        {
+                            'data_href':'javascript:',//跳转链接
+                            'shopname':'合村日本料理(虹桥路店)文案文案文案文案文案文案文案文案文案文案文案文案',//商户名称
+                            'picture':'../../images/merchant_test1.jpg',//商户LOGO
+                            'category':'美食',//商户分类
+                            'times':'100',//商户优惠购买次数
+                            'star':'<div class="star"><span class="star_off"></span><span class="star_off"></span><span class="star_off"></span><span class="star_off"></span><span class="star_off"></span></div>',
+                            'distance':'19.34km',//商户距离
+                            'discount':false//无文案情况为false
+                        },
+                        {
+                            'data_href':'javascript:',//跳转链接
+                            'shopname':'合村日本料理(虹桥路店)文案文案文案文案文案文案文案文案文案文案文案文案',//商户名称
+                            'picture':'../../images/merchant_test1.jpg',//商户LOGO
+                            'category':'美食',//商户分类
+                            'times':'100',//商户优惠购买次数
+                            'star':'<div class="star"><span class="star_off"></span><span class="star_off"></span><span class="star_off"></span><span class="star_off"></span><span class="star_off"></span></div>',
+                            'distance':'19.34km',//商户距离
+                            'discount':true,//有文案情况下为true
+                            'discount_text':'下单立即满减 满100减10'//文本内容
+                        }
+                    ]
+
+                })
+
+        }
+
+    })
+</script>

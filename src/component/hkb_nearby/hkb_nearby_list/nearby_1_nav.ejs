@@ -1,0 +1,27 @@
+<div class="nearby_nav">
+    <div class="tab_nav"></div>
+    <div class="nav_contain">
+        <div id="allTab">全部<span>∨</span></div>
+        <div class="tab">销量最好</div>
+        <div class="tab">评价最好</div>
+    </div>
+</div>
+
+<script>
+
+
+
+    document.getElementsByClassName('nav_contain')[0].addEventListener('click',function () {
+
+        nearBy.clickTab('sort_select',this)
+
+    },false);
+
+    //下拉框
+    dropDownList.hkbDropDown();
+
+    //销量&评价切换
+    nearBy.otherTabRemove();
+
+
+</script>

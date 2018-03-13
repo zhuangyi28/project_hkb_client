@@ -1,0 +1,51 @@
+<!--支付方式-->
+<div class="hkb_pay_icon">
+    <img src="../../images/xin.png"/>
+    <span>支付方式</span>
+</div>
+
+
+<div class="confirm_bill">
+
+    <div class="pay_box">
+        <!-- 微信支付-->
+        <label class="pay_mode hkb_alignment_center">
+            <div class="confirm_mode_seller ">
+                <img src="../../images/wechat.png">
+                <span class="confirm_text">微信支付</span>
+            </div>
+            <input type="checkbox" class="confirm_choose" checked>
+        </label>
+
+        <!-- 银行卡-->
+        <label class="pay_mode hkb_alignment_center">
+            <div class="confirm_mode_seller ">
+                <img src="../../images/bank.png">
+                <span class="confirm_text">中国农业 储蓄卡(0805)</span>
+            </div>
+            <input type="checkbox" class="confirm_choose">
+        </label>
+
+        <!-- 会员卡 -->
+        <label class="pay_mode hkb_alignment_center">
+            <div class="confirm_mode_seller ">
+                <img src="../../images/hkb_card.png">
+                <span class="confirm_text">会员卡支付</span>
+            </div>
+            <input type="checkbox" class="confirm_choose">
+        </label>
+    </div>
+</div>
+
+
+
+<!-- 下一步-->
+<div class="confirm_next" >
+
+    <a class= href=" href="../hkb_success/hkb_success.html"><span>确认支付</span></a>
+
+</div>
+<script>
+    //选择支付方式
+    confirmChoose.inputChoose();
+</script>

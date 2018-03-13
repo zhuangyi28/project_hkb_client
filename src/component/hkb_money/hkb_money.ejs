@@ -1,0 +1,25 @@
+<div class="hkb_money_amount">
+    <div class="money_squareness">
+        <div class="money_title">付款金额（元）：</div>
+        <div class="value">
+            <span class="rmb_unit">￥</span>
+            <div class="number keybroad">
+                <div class="keyNumshow" id="savekeyNum"></div>
+                <input readonly class="key_input" id="key_input" value="">
+            </div>
+        </div>
+        <div class="money_text">请询问服务员后输入</div>
+    </div>
+</div>
+<script>
+    /*弹出数字键盘*/
+    var jfkeybroad = new jfNumKeybroad.keyBroadShow({
+            'hideButton':'money_next',   //其他的关闭按钮
+            'showNumEle':'savekeyNum',   //点击出现键盘的元素，并且存储数字，ID选择器
+            'saveNumEle':'keyNumshow',  //用于显示当前金额的值的元素，用于判断光标，class选择器
+            'clearButton':false,       //清除数字按钮
+            'saveInput':'key_input',   //存入键盘的值，input元素的class选择器
+            'MaxNum':'9'               //键盘可以输入的最大位数
+        });
+    jfkeybroad.run();//页面初始的时候，开启键盘
+</script>

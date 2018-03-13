@@ -1,0 +1,83 @@
+
+  .use_guide_explain {
+
+    position: relative;
+    padding-bottom: 20px;
+
+    .explain_text_theme {
+
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 20px;
+
+    }
+
+    .explain_text_content {
+
+      font-size: 14px;
+      padding-left: 10px;
+
+      span.title {
+
+        background-color: #9ac53b;
+        border: none;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+
+      }
+
+      span + span {
+        font-weight: bold;
+        margin-left: 10px;
+      }
+
+      .text_content_1 {
+        margin-left: 35px;
+        font-size: 14px;
+        color: #ababab;
+      }
+
+    }
+
+    .use_guide_explain_picture {
+      position: relative;
+
+
+      img {
+
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+
+      }
+
+    }
+
+    &:last-of-type{
+      &:after{
+        content: '';
+        border-bottom: none;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 15px;
+      bottom: 10px;
+      width: 92%;
+      border-bottom: solid 1px #dfdfdf;
+
+    }
+
+  }

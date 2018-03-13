@@ -1,0 +1,60 @@
+<div class="hkb_pop_up" id="pay_way">
+
+    <div class="hkb_pop_up_main">
+
+        <div class="pop_top">
+
+            <div class="pop_title">选择优先支付方式</div>
+
+            <div class="pop_cancel"></div>
+
+            <div class="pop_line"></div>
+
+        </div>
+
+        <div class="pop_main" id="container_pay">
+
+            <!-- 会员卡-->
+            <div class="pay_contain selected">
+                <div class="hkb">
+                    <img src="../../images/hkb_card.png">会员卡支付
+                </div>
+                <div class="hkb_radio"></div>
+            </div>
+
+            <!--微信-->
+            <div class="pay_contain">
+                <div class="wechat">
+                    <img src="../../images/wechat.png">微信支付
+                </div>
+                <div class="hkb_radio"></div>
+            </div>
+
+            <!--微信-->
+            <div class="pay_contain">
+                <div class="wechat">
+                    <img src="../../images/wechat.png">微信支付
+                </div>
+                <div class="hkb_radio"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hkb_pop_up_bg">
+
+    </div>
+
+</div>
+
+<script>
+
+    //弹框
+    payShow=new hkbShowPop({'ele':'pay_way'});
+
+    //选择支付方式
+    payment.paymentMethod();
+
+
+</script>

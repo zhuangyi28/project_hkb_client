@@ -1,0 +1,48 @@
+.hkb_number{
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 3px #E9E9E9;
+  margin-top: 20px;
+  position: relative;
+  color: #4a4a4a;
+  .number_section{
+    padding: 15px;
+    vertical-align: middle;
+    position: relative;
+    color: #4a4a4a;
+   .number_section_icon{
+     img{
+       width: 25px;
+       height: 25px;
+     }
+
+   }
+   .number_section_text{
+     font-size: 18px;
+     padding: 0 0 0 15px;
+
+   }
+    &:last-child:after{
+      /* padding-top: 10px;*/
+      content: " ";
+      border-bottom: none;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      height: 1px;
+      bottom: 0;
+      width: 92%;
+      left: 15px;
+      border-top: 1px solid #ddd;
+      transform-origin: 0 0;
+      transform: scaleY(0.6);
+    }
+    &:active{
+      background: #f1f1f1;
+    }
+
+  }
+}
+

@@ -1,0 +1,286 @@
+/*打钩*/
+
+.hkb_success_animation {
+  margin-top: 20%;
+
+  /*支付成功动画*/
+
+  .hkb_animation_pay {
+
+    padding-bottom: 50px;
+
+    .hkb_circle_white {
+
+      width: 140px;
+      height: 70px;
+      border-radius: 70px 70px 0 0;
+      background: white;
+      margin: auto;
+      position: relative;
+      animation: white2move 1.5s;
+
+      @keyframes white2move {
+        0% {
+          transform: scale3d(1,1,1);
+
+        }
+        50% {
+          transform: scale3d(.8,.8,.8);
+        }
+        100% {
+          transform: scale3d(1,1,1);
+        }
+      }
+
+      .hkb_circle_green {
+        position: absolute;
+        top:10px;
+        opacity: .4;
+        width:120px;
+        height:60px;
+        border-radius:60px 60px 0 0;
+        background: #bad884;
+        right: 10px;
+          animation: green1move 1.5s;
+
+
+          @keyframes green1move {
+            0% {
+              color: #bad884;
+              opacity: .9;
+            }
+            45% {
+              color: #bad884;
+              opacity: .7;
+            }
+            75% {
+              color: #bad884;
+              opacity: .5;
+            }
+            100% {
+              color: #bad884;
+              opacity: .3;
+            }
+          }
+
+      }
+
+
+      /*对勾*/
+      .hkb_animation_success {
+
+        position: absolute;
+        width: 100%;
+
+
+        .swal2-icon {
+          padding: 0;
+          position: relative;
+          width: 80px;
+          height: 80px;
+          margin: 0 auto;
+          box-sizing: content-box;
+          cursor: default;
+          user-select: none;
+          .tip1 {
+            width: 25px;
+            left: 14px;
+            top: 46px;
+            transform: rotate(45deg);
+          }
+          .line {
+            height: 5px;
+            background-color: #8fc037;
+            display: block;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 2;
+          }
+          .animate-success-tip1{
+            animation: animate-success-tip1 .75s;
+            @keyframes animate-success-tip1 {
+              0%, 54% {
+                width: 0;
+                left: 1px;
+                top: 19px;
+              }
+
+              70% {
+                width: 50px;
+                left: -8px;
+                top: 37px;
+              }
+              84% {
+                width: 17px;
+                left: 21px;
+                top: 48px;
+              }
+              100% {
+                width: 25px;
+                left: 14px;
+                top: 45px;
+              }
+            }
+          } /*success 短的*/
+          .animate-success-long1 {
+            animation: animate-success-long1 .75s;
+            @keyframes animate-success-long1 {
+              0%, 65% {
+                width: 0;
+                right: 46px;
+                top: 54px;
+              }
+              84% {
+                width: 55px;
+                right: 0;
+                top: 35px;
+              }
+              100% {
+                width: 47px;
+                right: 8px;
+                top: 38px;
+              }
+            }
+          }/*success 长的*/
+
+          .long1 {
+            width: 47px;
+            right: 8px;
+            top: 38px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      .hkb_line_orange {
+
+        position: absolute;
+        width: 100%;
+        top: 79%;
+
+        .hkb_line_top {
+         position: absolute;
+
+          img {
+            width: 130px;
+          }
+          animation: linetop1move 1.5s infinite;
+          animation-direction: alternate;
+
+          @keyframes linetop1move {
+            0% {
+              transform: translateX(25px);
+            }
+            100% {
+              transform: translateX(-25px);
+            }
+
+          }
+        }
+
+        .hkb_line_bottom {
+
+          width: 100%;
+          padding-top: 10px;
+          img {
+            width: 165px;
+
+          }
+
+          animation: linebottom2move 1.5s infinite;
+          animation-direction: alternate;
+
+          @keyframes linebottom2move {
+            0% {
+              transform: translateX(-25px);
+            }
+            100% {
+              transform: translateX(25px);
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  /*操作成功*/
+
+  .hkb_pay_success_text {
+
+    .hkb_text_success {
+
+      position: relative;
+      height: 100%;
+      width: 100%;
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .hkb_button_success:active {
+      opacity: 0.8;
+
+    }
+
+    /*消费账单*/
+
+    .hkb_fail_text_bill {
+      position: relative;
+      margin: 0 15px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 5px;
+
+      .hkb_fail_bill {
+
+        background: #fff;
+        padding: 5px 15px;
+        font-size: 16px;
+        text-align: center;
+
+        &:first-child {
+          color: #ef932e;
+        }
+
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: calc(~'(100% - 34px) / 2');
+        width: 0;
+        height: 0;
+        border-width: 17px;
+        border-style: solid;
+        border-color: transparent;
+        margin-bottom: -5px;
+        border-bottom-color: currentColor;
+        color: #fff;
+      }
+    }
+
+    /*关闭*/
+    .hkb_button_success {
+      margin-top: 60px;
+      a {
+
+        display: block;
+        margin: 0 auto;
+        width: 92%;
+        top: 65%;
+        border-radius: 5px;
+        background: linear-gradient(left, #8abc23, #9ac53b, #acd163, #c4dc81);
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        color: white;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

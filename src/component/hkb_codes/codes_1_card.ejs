@@ -1,0 +1,105 @@
+<!-- 付款码 -->
+
+<div class="hkb_codes_background">
+
+    <div class="codes_background_color">
+
+        <!-- 二维码白色底 -->
+
+        <div class="hkb_codes_card">
+
+            <div class="codes_title">此类收款码提供扫码付款时使用</div>
+            <!-- 二维码 -->
+            <div class="codes_card" id="QR_code"></div>
+
+            <!-- 中间图片-->
+            <div class="logo_QR"><img src="../../images/code.png"></div>
+
+            <!-- 二维码未出现时动画-->
+            <div class="hkb_QR_loading">
+                <div class="k-spinner">
+                    <div class="k-bubble-1"></div>
+                    <div class="k-bubble-2"></div>
+                </div>
+
+            </div>
+
+            <!-- 分割线-->
+            <div class="codes_line"> </div>
+
+        </div>
+
+
+        <div class="codes_circle ">
+
+            <div class="codes_test">提示：二维码有效期为60秒</div>
+
+        </div>
+
+        <!--<div class="codes_all hkb_alignment_center" onclick="payShow.show()">-->
+
+            <!--<div class="codes_wechat"><img src="../../images/wechat.png"/><span>微信支付</span>   &lt;!&ndash;微信支付&ndash;&gt;-->
+
+            <!--</div>-->
+
+            <!--<div class="codes_change">-->
+                <!--&lt;!&ndash; 更换图标 &ndash;&gt;-->
+                <!--<div class="change_circle"><img src="../../images/circle-orange.png"/><span>更换</span>-->
+
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+
+
+    </div>
+
+</div>
+
+<div class="hkb_codes_bg"></div>
+
+
+<script>
+
+    //二维码
+var qrcode = new QRCode('QR_code',{
+
+    text:'http://www.baidu.com',             //输入二维码解析网址
+    correctLevel : QRCode.CorrectLevel.H     //容错率30%
+
+})
+//注意
+
+    //使用API
+    //qrcode.clear()                    //二维码清除方法
+    //qrcode.makeCode('new_content')    //添加新的解析地址
+
+
+
+
+
+//     var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+//
+//     window.addEventListener(evt,resize,false);
+//
+//     function resize() {
+//
+//         if(window.orientation == 0 || window.orientation == 180) {
+//
+//
+//             document.getElementsByClassName('hkb_codes_background')[0].style.marginTop = '100px'
+//         }
+//         else{
+//
+//             document.getElementsByClassName('hkb_codes_background')[0].style.marginTop = '20px'
+//         }
+//
+//
+//     }
+//    resize();
+//
+
+
+
+
+</script>
