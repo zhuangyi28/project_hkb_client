@@ -45,6 +45,8 @@ var moveRefresh={
 
         function startFn(event){
 
+
+
             var evt=event || window.event;
 
             if(this.className.indexOf('hkb_refresh_move')>-1||refreshText.className.indexOf('hkb_refresh_move')>-1){
@@ -98,6 +100,7 @@ var moveRefresh={
         function endFn(){
 
             if(getDis>moveDis&&moveEle.scrollTop<10){
+
 
                 if(thisShowFn){
 

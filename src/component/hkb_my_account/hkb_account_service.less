@@ -22,64 +22,51 @@
 
   .hkb_service_type{
 
-    display: flex;
+    position: relative;
     width: 100%;
-    height: 80px;
-    overflow-x: hidden;
+    display: block;
 
 
 
     .service_type_main{
 
-      flex: 1;
+      width: 33.3333%;
       vertical-align: middle;
       align-items: center;
+      float: left;
+      flex: 1;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a4a4a;
 
 
       .service_icon{
 
-      width: 100%;
-      padding-left: 35px;
+        width: 100%;
         img{
-        width: 36px;
+          width: 36px;
+          margin: 0 auto;
+          display: block;
         }
       }
 
-      .second{
-        padding-left: 40px;
-      }
-      .service_title{
-
-
-        padding-left: 30px;
-        color: #8a8a8a;
-
-      }
-      .mass{
-
-        padding-left: 41px;
-
-      }
-      .hungry{
-
-        padding-left: 37px;
-
-      }
-
-      .meituan{
-
-        padding-left: 38px;
-
-      }
 
     }
 
-a:active{
+    a:active{
 
-  opacity: .6;
+      opacity: .6;
 
 
 }
+    &:after{
+      content:'';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+
+    }
 
 
   }
